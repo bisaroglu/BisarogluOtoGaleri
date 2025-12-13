@@ -7,23 +7,13 @@ using System.Data.SqlClient;
 
 namespace BisarogluOtoGaleri.DataAccess
 {
-    public class Baglanti
+    namespace BisarogluOtoGaleri.DataAccess
     {
-        public static SqlConnection BaglantiGetir()
+        public class Baglanti
         {
-            // Veritabanı ismin 'DbGaleriOtomasyonu' idi, onu yazdım.
-            string adres = @"Data Source=.\SQLEXPRESS;Initial Catalog=DbGaleriOtomasyonu;Integrated Security=True";
-
-            SqlConnection baglan = new SqlConnection(adres);
-            try
-            {
-                baglan.Open();
-            }
-            catch (Exception hata)
-            {
-                throw new Exception("SQL Bağlantı Hatası: " + hata.Message);
-            }
-            return baglan;
+            // Sadece connection string'i döndüren bir özellik veya metot
+            // Bağlantıyı burada AÇMIYORUZ.
+            public static string Adres = @"Data Source=.\SQLEXPRESS;Initial Catalog=DbGaleriOtomasyonu;Integrated Security=True";
         }
     }
 }

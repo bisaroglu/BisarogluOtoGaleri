@@ -26,4 +26,3 @@ namespace BisarogluOtoGaleri
         }
     }    
 }
-""

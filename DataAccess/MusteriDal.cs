@@ -1,4 +1,5 @@
-﻿using BisarogluOtoGaleri.Entity;
+﻿using BisarogluOtoGaleri.DataAccess.BisarogluOtoGaleri.DataAccess;
+using BisarogluOtoGaleri.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -9,26 +10,38 @@ namespace BisarogluOtoGaleri.DataAccess
     {
         public List<Musteri> TumMusterileriGetir()
         {
-            SqlConnection baglanti = Baglanti.BaglantiGetir();
-            SqlCommand komut = new SqlCommand("Select * From Tbl_Musteriler", baglanti);
-            SqlDataReader dr = komut.ExecuteReader();
-
             List<Musteri> liste = new List<Musteri>();
 
-            while (dr.Read())
+            // 'using' bloğu, süslü parantez bittiği an bağlantıyı otomatik kapatır ve belleği temizler (Dispose).
+            using (SqlConnection baglanti = new SqlConnection(Baglanti.Adres))
             {
-                Musteri m = new Musteri();
-                m.MusteriID = Convert.ToInt32(dr["MusteriID"]);
-                m.Ad = dr["Ad"].ToString();
-                m.Soyad = dr["Soyad"].ToString();
-                m.TCKimlik = dr["TCKimlik"].ToString();
-                m.Telefon = dr["Telefon"].ToString();
-                m.Mail = dr["Mail"].ToString();
-                m.Adres = dr["Adres"].ToString();
-                liste.Add(m);
-            }
-            dr.Close();
-            baglanti.Close();
+                if (baglanti.State == System.Data.ConnectionState.Closed)
+                {
+                    baglanti.Open();
+                }
+
+                using (SqlCommand komut = new SqlCommand("Select * From Tbl_Musteriler", baglanti))
+                {
+                    using (SqlDataReader dr = komut.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            Musteri m = new Musteri();
+                            // DBNull kontrolü yapmak profesyonelliktir (Boş veri gelirse patlamasın diye)
+                            m.MusteriID = Convert.ToInt32(dr["MusteriID"]);
+                            m.Ad = dr["Ad"] != DBNull.Value ? dr["Ad"].ToString() : "";
+                            m.Soyad = dr["Soyad"] != DBNull.Value ? dr["Soyad"].ToString() : "";
+                            m.TCKimlik = dr["TCKimlik"] != DBNull.Value ? dr["TCKimlik"].ToString() : "";
+                            m.Telefon = dr["Telefon"] != DBNull.Value ? dr["Telefon"].ToString() : "";
+                            m.Mail = dr["Mail"] != DBNull.Value ? dr["Mail"].ToString() : "";
+                            m.Adres = dr["Adres"] != DBNull.Value ? dr["Adres"].ToString() : "";
+
+                            liste.Add(m);
+                        }
+                    } // Reader burada kapanır
+                } // Command burada yok edilir
+            } // Bağlantı burada OTOMATİK kapanır.
+
             return liste;
         }
     }

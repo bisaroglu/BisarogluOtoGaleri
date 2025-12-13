@@ -158,3 +158,4 @@ C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\refint\B
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.pdb
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.genruntimeconfig.cache
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\ref\BisarogluOtoGaleri.dll
+C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.sourcelink.json
