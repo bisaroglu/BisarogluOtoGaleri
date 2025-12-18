@@ -1,4 +1,4 @@
-﻿using BisarogluOtoGaleri.DataAccess.BisarogluOtoGaleri.DataAccess;
+﻿using BisarogluOtoGaleri.DataAccess;
 using BisarogluOtoGaleri.Entity;
 using System;
 using System.Collections.Generic;

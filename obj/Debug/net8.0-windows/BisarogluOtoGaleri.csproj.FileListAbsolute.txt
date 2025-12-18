@@ -146,7 +146,6 @@ C:\Users\dogus\source\repos\BisarogluOtoGaleri\bin\Debug\net8.0-windows\runtimes
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.csproj.AssemblyReference.cache
-C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.Form1.resources
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.csproj.GenerateResource.cache
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.AssemblyInfoInputs.cache
@@ -159,3 +158,9 @@ C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\Bisarogl
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.genruntimeconfig.cache
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\ref\BisarogluOtoGaleri.dll
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.sourcelink.json
+C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.Properties.Resources.resources
+C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.SplashScreen.resources
+C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.LoginForm.resources
+C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.FrmAnaSayfa.resources
+C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.FrmAracListesi.resources
+C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.FrmAracDetay.resources

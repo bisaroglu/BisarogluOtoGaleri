@@ -15,7 +15,8 @@ namespace BisarogluOtoGaleri.Entity
         public int BoyaliParcaSayisi { get; set; }  // AI için negatif katsayı
         public bool AgirHasarKayitliMi { get; set; } // Fiyatı direkt %30-%50 etkiler
         public decimal Fiyat { get; set; }    // Gerçek fiyat (AI eğitimi için lazım olacak)
-        public string Durum { get; set; }     // Satılık, Satıldı vs.
+        public string Durum { get; set; }
+        public string ResimYolu { get; set; }
 
         // İlişkisel veriler için (Ekranda göstermek adına)
         // Veritabanı mapping'inde ignore edilebilir ama UI için lazımdır.

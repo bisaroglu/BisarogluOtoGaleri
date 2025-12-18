@@ -3,52 +3,104 @@
   "WorkspaceRootPath": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\dataaccess\\arabadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:dataaccess\\arabadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\dataaccess\\musteridal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:dataaccess\\musteridal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\dataaccess\\baglanti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:dataaccess\\baglanti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\frmaracdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:frmaracdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\business\\arabamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:business\\arabamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\business\\basitfiyathesaplayici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:business\\basitfiyathesaplayici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\business\\ifiyathesaplayici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:business\\ifiyathesaplayici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\dataaccess\\arabadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:dataaccess\\arabadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\frmaracdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:frmaracdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\entity\\araba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:entity\\araba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\business\\musterimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:business\\musterimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\frmaraclistesi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:frmaraclistesi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\dataaccess\\baglanti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:dataaccess\\baglanti.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\frmanasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:frmanasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\frmanasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:frmanasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\frmanasayfa.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:frmanasayfa.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\frmaraclistesi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:frmaraclistesi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\loginform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:loginform.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\splashscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:splashscreen.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:splashscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\dataaccess\\musteridal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:dataaccess\\musteridal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\bisarogluotogaleri.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:bisarogluotogaleri.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\business\\musterimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:business\\musterimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\entity\\musteri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:entity\\musteri.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\business\\ifiyathesaplayici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:business\\ifiyathesaplayici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\business\\basitfiyathesaplayici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:business\\basitfiyathesaplayici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,151 +110,302 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAeAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "FrmAracDetay.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracDetay.cs",
+              "RelativeDocumentMoniker": "FrmAracDetay.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracDetay.cs",
+              "RelativeToolTip": "FrmAracDetay.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAEwDQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T19:36:01.226Z",
+              "WhenOpened": "2025-12-17T08:46:45.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ArabaManager.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\ArabaManager.cs",
               "RelativeDocumentMoniker": "Business\\ArabaManager.cs",
               "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\ArabaManager.cs",
               "RelativeToolTip": "Business\\ArabaManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAiwAkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwCkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T19:34:31.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IFiyatHesaplayici.cs",
-              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\IFiyatHesaplayici.cs",
-              "RelativeDocumentMoniker": "Business\\IFiyatHesaplayici.cs",
-              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\IFiyatHesaplayici.cs",
-              "RelativeToolTip": "Business\\IFiyatHesaplayici.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T19:30:11.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Baglanti.cs",
-              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\Baglanti.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Baglanti.cs",
-              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\Baglanti.cs",
-              "RelativeToolTip": "DataAccess\\Baglanti.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T13:07:32.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MusteriDal.cs",
-              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\MusteriDal.cs",
-              "RelativeDocumentMoniker": "DataAccess\\MusteriDal.cs",
-              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\MusteriDal.cs",
-              "RelativeToolTip": "DataAccess\\MusteriDal.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T13:07:47.616Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "ArabaDal.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\ArabaDal.cs",
               "RelativeDocumentMoniker": "DataAccess\\ArabaDal.cs",
-              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\ArabaDal.cs",
-              "RelativeToolTip": "DataAccess\\ArabaDal.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAiwCwAAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\ArabaDal.cs*",
+              "RelativeToolTip": "DataAccess\\ArabaDal.cs*",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowEkAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T19:33:54.282Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BasitFiyatHesaplayici.cs",
-              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\BasitFiyatHesaplayici.cs",
-              "RelativeDocumentMoniker": "Business\\BasitFiyatHesaplayici.cs",
-              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\BasitFiyatHesaplayici.cs",
-              "RelativeToolTip": "Business\\BasitFiyatHesaplayici.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBwAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "FrmAracDetay.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracDetay.cs",
+              "RelativeDocumentMoniker": "FrmAracDetay.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracDetay.cs [Tasar\u0131m]",
+              "RelativeToolTip": "FrmAracDetay.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T19:39:52.152Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T08:43:01.751Z",
+              "EditorCaption": " [Tasar\u0131m]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Araba.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Entity\\Araba.cs",
               "RelativeDocumentMoniker": "Entity\\Araba.cs",
               "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Entity\\Araba.cs",
               "RelativeToolTip": "Entity\\Araba.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA9wAYAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwBIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T19:29:10.015Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAUwBwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "FrmAracListesi.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracListesi.cs",
+              "RelativeDocumentMoniker": "FrmAracListesi.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracListesi.cs",
+              "RelativeToolTip": "FrmAracListesi.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAkwCAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T13:19:22.925Z",
+              "WhenOpened": "2025-12-17T08:27:34.849Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Form1.cs [Tasar\u0131m]",
-              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Form1.cs [Tasar\u0131m]",
-              "RelativeToolTip": "Form1.cs [Tasar\u0131m]",
+              "DocumentIndex": 6,
+              "Title": "Baglanti.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\Baglanti.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Baglanti.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\Baglanti.cs",
+              "RelativeToolTip": "DataAccess\\Baglanti.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T13:18:01.478Z"
+              "WhenOpened": "2025-12-09T13:07:32.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrmAnaSayfa.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAnaSayfa.cs",
+              "RelativeDocumentMoniker": "FrmAnaSayfa.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAnaSayfa.cs [Tasar\u0131m]",
+              "RelativeToolTip": "FrmAnaSayfa.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T07:23:35.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmAnaSayfa.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAnaSayfa.cs",
+              "RelativeDocumentMoniker": "FrmAnaSayfa.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAnaSayfa.cs",
+              "RelativeToolTip": "FrmAnaSayfa.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T07:34:42.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FrmAnaSayfa.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAnaSayfa.Designer.cs",
+              "RelativeDocumentMoniker": "FrmAnaSayfa.Designer.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAnaSayfa.Designer.cs",
+              "RelativeToolTip": "FrmAnaSayfa.Designer.cs",
+              "ViewState": "AgIAAMgAAAAAAAAAAADwv9gAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T13:31:28.634Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "FrmAracListesi.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracListesi.cs",
+              "RelativeDocumentMoniker": "FrmAracListesi.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracListesi.cs [Tasar\u0131m]",
+              "RelativeToolTip": "FrmAracListesi.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T08:25:04.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginForm.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.cs [Tasar\u0131m]",
+              "RelativeToolTip": "LoginForm.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T06:04:33.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.cs",
+              "RelativeDocumentMoniker": "LoginForm.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.cs",
+              "RelativeToolTip": "LoginForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T06:26:58.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.Designer.cs",
+              "RelativeDocumentMoniker": "LoginForm.Designer.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.Designer.cs",
+              "RelativeToolTip": "LoginForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T07:50:34.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginForm.resx",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.resx",
+              "RelativeDocumentMoniker": "LoginForm.resx",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.resx",
+              "RelativeToolTip": "LoginForm.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-12-17T07:53:07.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "SplashScreen.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\SplashScreen.Designer.cs",
+              "RelativeDocumentMoniker": "SplashScreen.Designer.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\SplashScreen.Designer.cs",
+              "RelativeToolTip": "SplashScreen.Designer.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAQwEYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T11:49:13.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T19:36:01.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SplashScreen.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\SplashScreen.cs",
+              "RelativeDocumentMoniker": "SplashScreen.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\SplashScreen.cs",
+              "RelativeToolTip": "SplashScreen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T11:47:00.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "SplashScreen.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\SplashScreen.cs",
+              "RelativeDocumentMoniker": "SplashScreen.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\SplashScreen.cs [Tasar\u0131m]",
+              "RelativeToolTip": "SplashScreen.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T11:42:15.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MusteriDal.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\MusteriDal.cs",
+              "RelativeDocumentMoniker": "DataAccess\\MusteriDal.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\MusteriDal.cs",
+              "RelativeToolTip": "DataAccess\\MusteriDal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-09T13:07:47.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BisarogluOtoGaleri.csproj",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\BisarogluOtoGaleri.csproj",
+              "RelativeDocumentMoniker": "BisarogluOtoGaleri.csproj",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\BisarogluOtoGaleri.csproj",
+              "RelativeToolTip": "BisarogluOtoGaleri.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-12-16T11:41:02.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IFiyatHesaplayici.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\IFiyatHesaplayici.cs",
+              "RelativeDocumentMoniker": "Business\\IFiyatHesaplayici.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\IFiyatHesaplayici.cs",
+              "RelativeToolTip": "Business\\IFiyatHesaplayici.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T19:30:11.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "BasitFiyatHesaplayici.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\BasitFiyatHesaplayici.cs",
+              "RelativeDocumentMoniker": "Business\\BasitFiyatHesaplayici.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\BasitFiyatHesaplayici.cs",
+              "RelativeToolTip": "Business\\BasitFiyatHesaplayici.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-13T19:39:52.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "Musteri.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Entity\\Musteri.cs",
               "RelativeDocumentMoniker": "Entity\\Musteri.cs",
               "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Entity\\Musteri.cs",
               "RelativeToolTip": "Entity\\Musteri.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-09T13:07:08.853Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
               "Title": "MusteriManager.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\MusteriManager.cs",
               "RelativeDocumentMoniker": "Business\\MusteriManager.cs",

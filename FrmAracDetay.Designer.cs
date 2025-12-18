@@ -1,0 +1,190 @@
+﻿namespace BisarogluOtoGaleri
+{
+    partial class FrmAracDetay
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            txtMarka = new TextBox();
+            txtModel = new TextBox();
+            txtYil = new TextBox();
+            txtKilometre = new TextBox();
+            txtFiyat = new TextBox();
+            cmbVites = new ComboBox();
+            cmbYakit = new ComboBox();
+            btnKaydet = new Button();
+            chkAgirHasar = new CheckBox();
+            pbxAracResim = new PictureBox();
+            btnResimSec = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            ((System.ComponentModel.ISupportInitialize)pbxAracResim).BeginInit();
+            SuspendLayout();
+            // 
+            // txtMarka
+            // 
+            txtMarka.Location = new Point(319, 73);
+            txtMarka.Name = "txtMarka";
+            txtMarka.Size = new Size(100, 23);
+            txtMarka.TabIndex = 0;
+            txtMarka.Text = "Marka ID:";
+            // 
+            // txtModel
+            // 
+            txtModel.Location = new Point(319, 102);
+            txtModel.Name = "txtModel";
+            txtModel.Size = new Size(100, 23);
+            txtModel.TabIndex = 1;
+            txtModel.Text = "Model ID:";
+            // 
+            // txtYil
+            // 
+            txtYil.Location = new Point(319, 131);
+            txtYil.Name = "txtYil";
+            txtYil.Size = new Size(100, 23);
+            txtYil.TabIndex = 2;
+            txtYil.Text = "Yıl:";
+            // 
+            // txtKilometre
+            // 
+            txtKilometre.Location = new Point(319, 160);
+            txtKilometre.Name = "txtKilometre";
+            txtKilometre.Size = new Size(100, 23);
+            txtKilometre.TabIndex = 3;
+            txtKilometre.Text = "Kilometre:";
+            // 
+            // txtFiyat
+            // 
+            txtFiyat.Location = new Point(319, 189);
+            txtFiyat.Name = "txtFiyat";
+            txtFiyat.Size = new Size(100, 23);
+            txtFiyat.TabIndex = 4;
+            txtFiyat.Text = "Fiyat:";
+            // 
+            // cmbVites
+            // 
+            cmbVites.FormattingEnabled = true;
+            cmbVites.Location = new Point(319, 218);
+            cmbVites.Name = "cmbVites";
+            cmbVites.Size = new Size(121, 23);
+            cmbVites.TabIndex = 5;
+            cmbVites.Text = "Vites Tipi:";
+            // 
+            // cmbYakit
+            // 
+            cmbYakit.FormattingEnabled = true;
+            cmbYakit.Location = new Point(319, 247);
+            cmbYakit.Name = "cmbYakit";
+            cmbYakit.Size = new Size(121, 23);
+            cmbYakit.TabIndex = 6;
+            cmbYakit.Text = "Yakıt Türü:";
+            // 
+            // btnKaydet
+            // 
+            btnKaydet.Location = new Point(395, 304);
+            btnKaydet.Name = "btnKaydet";
+            btnKaydet.Size = new Size(75, 23);
+            btnKaydet.TabIndex = 8;
+            btnKaydet.Text = "KAYDET";
+            btnKaydet.UseVisualStyleBackColor = true;
+            btnKaydet.Click += btnKaydet_Click;
+            // 
+            // chkAgirHasar
+            // 
+            chkAgirHasar.AutoSize = true;
+            chkAgirHasar.Location = new Point(331, 279);
+            chkAgirHasar.Name = "chkAgirHasar";
+            chkAgirHasar.Size = new Size(109, 19);
+            chkAgirHasar.TabIndex = 9;
+            chkAgirHasar.Text = "Ağır Hasarlı mı?";
+            chkAgirHasar.UseVisualStyleBackColor = true;
+            // 
+            // pbxAracResim
+            // 
+            pbxAracResim.BorderStyle = BorderStyle.FixedSingle;
+            pbxAracResim.Location = new Point(31, 39);
+            pbxAracResim.Name = "pbxAracResim";
+            pbxAracResim.Size = new Size(153, 103);
+            pbxAracResim.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbxAracResim.TabIndex = 10;
+            pbxAracResim.TabStop = false;
+            // 
+            // btnResimSec
+            // 
+            btnResimSec.Location = new Point(113, 213);
+            btnResimSec.Name = "btnResimSec";
+            btnResimSec.Size = new Size(104, 23);
+            btnResimSec.TabIndex = 11;
+            btnResimSec.Text = "Resim Seç...";
+            btnResimSec.UseVisualStyleBackColor = true;
+            btnResimSec.Click += btnResimSec_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            openFileDialog1.Filter = "Resim Dosyaları|*.jpg;*.jpeg;*.png;*.bmp";
+            // 
+            // FrmAracDetay
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(btnResimSec);
+            Controls.Add(pbxAracResim);
+            Controls.Add(chkAgirHasar);
+            Controls.Add(btnKaydet);
+            Controls.Add(cmbYakit);
+            Controls.Add(cmbVites);
+            Controls.Add(txtFiyat);
+            Controls.Add(txtKilometre);
+            Controls.Add(txtYil);
+            Controls.Add(txtModel);
+            Controls.Add(txtMarka);
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Name = "FrmAracDetay";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "FrmAracDetay";
+            Load += FrmAracDetay_Load;
+            ((System.ComponentModel.ISupportInitialize)pbxAracResim).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private TextBox txtMarka;
+        private TextBox txtModel;
+        private TextBox txtYil;
+        private TextBox txtKilometre;
+        private TextBox txtFiyat;
+        private ComboBox cmbVites;
+        private ComboBox cmbYakit;
+        private Button btnKaydet;
+        private CheckBox chkAgirHasar;
+        private PictureBox pbxAracResim;
+        private Button btnResimSec;
+        private OpenFileDialog openFileDialog1;
+    }
+}

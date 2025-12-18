@@ -1,4 +1,5 @@
-﻿using BisarogluOtoGaleri.DataAccess;
+﻿using System.IO;
+using BisarogluOtoGaleri.DataAccess;
 using BisarogluOtoGaleri.Entity;
 using System;
 
@@ -7,7 +8,38 @@ namespace BisarogluOtoGaleri.Business
     public class ArabaManager
     {
         ArabaDal _arabaDal = new ArabaDal();
+        public List<Araba> TumArabalariGetir()
+        {
+            // Burada ileride "Sadece Satılık olanları getir" gibi iş kuralları yazabiliriz.
+            return _arabaDal.TumArabalariGetir();
+        }
+        public string ResimDosyasiniYonet(string kaynakDosyaYolu)
+        {
+            // Eğer kullanıcı resim seçmediyse boş dön.
+            if (string.IsNullOrEmpty(kaynakDosyaYolu)) return "";
 
+            // 1. Hedef Klasörü Belirle (Projenin çalıştığı yer / AracResimleri)
+            // Application.StartupPath, bin/Debug klasörüdür.
+            string hedefKlasor = Path.Combine(System.Windows.Forms.Application.StartupPath, "AracResimleri");
+
+            // 2. Klasör yoksa oluştur
+            if (!Directory.Exists(hedefKlasor))
+            {
+                Directory.CreateDirectory(hedefKlasor);
+            }
+
+            // 3. Benzersiz bir dosya adı üret (Çakışmayı önlemek için GUID kullanıyoruz)
+            // Örn: "bmw.jpg" -> "550e8400-e29b-41d4-a716-446655440000.jpg" olur.
+            string dosyaUzantisi = Path.GetExtension(kaynakDosyaYolu);
+            string yeniDosyaAdi = Guid.NewGuid().ToString() + dosyaUzantisi;
+            string hedefTamYol = Path.Combine(hedefKlasor, yeniDosyaAdi);
+
+            // 4. Dosyayı kopyala
+            File.Copy(kaynakDosyaYolu, hedefTamYol, true); // true = üzerine yaz (gerekirse)
+
+            // Veritabanına sadece dosya adını kaydedeceğiz (Klasör yolu dinamik olabilir)
+            return yeniDosyaAdi;
+        }
         public void ArabaEkle(Araba araba)
         {
             // 1. Validasyon (Doğrulama) Kuralları
