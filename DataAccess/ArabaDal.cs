@@ -42,36 +42,58 @@ namespace BisarogluOtoGaleri.DataAccess
             }
             return arabalar;
         }
-        public void ArabaEkle(Araba araba)
+        public int ArabaEkle(Araba araba)
         {
 
             // Bağlantı yönetimi için 'using' bloğu kullanıyoruz (Memory Leak önlemi)
             using (SqlConnection baglanti = new SqlConnection(Baglanti.Adres))
             {
-                if (baglanti.State == System.Data.ConnectionState.Closed)
-                    baglanti.Open();
+                if (baglanti.State == System.Data.ConnectionState.Closed) baglanti.Open();
 
-                string sorgu = "INSERT INTO Tbl_Arabalar (MarkaID, ModelID, Yil, Kilometre, Fiyat, Durum, AgirHasarKayitliMi, ResimYolu) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8)";
+                // Sorgunun sonuna noktalı virgül koyup SELECT SCOPE_IDENTITY() ekledik.
+                // Bu komut, "Kaydı yap ve bana verdiğin ID'yi geri getir" demektir.
+                string sorgu = "INSERT INTO Tbl_Arabalar " +
+                               "(MarkaID, ModelID, Yil, Kilometre, Fiyat, Durum, AgirHasarKayitliMi, ResimYolu) " +
+                               "VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8); " +
+                               "SELECT SCOPE_IDENTITY();";
 
                 using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
                 {
-                    if (string.IsNullOrEmpty(araba.ResimYolu))
-                    {
-                        komut.Parameters.AddWithValue("@p8", DBNull.Value);
-                    }
-                    else
-                    {
-                        komut.Parameters.AddWithValue("@p8", araba.ResimYolu);
-                    }
-
-                    komut.ExecuteNonQuery();
                     komut.Parameters.AddWithValue("@p1", araba.MarkaID);
                     komut.Parameters.AddWithValue("@p2", araba.ModelID);
                     komut.Parameters.AddWithValue("@p3", araba.Yil);
                     komut.Parameters.AddWithValue("@p4", araba.Kilometre);
                     komut.Parameters.AddWithValue("@p5", araba.Fiyat);
                     komut.Parameters.AddWithValue("@p6", araba.Durum);
-                    komut.Parameters.AddWithValue("@p7", araba.AgirHasarKayitliMi); // Ekleme işlemi gerçekleşir
+                    komut.Parameters.AddWithValue("@p7", araba.AgirHasarKayitliMi);
+
+                    // Kapak resmi kontrolü
+                    if (string.IsNullOrEmpty(araba.ResimYolu))
+                        komut.Parameters.AddWithValue("@p8", DBNull.Value);
+                    else
+                        komut.Parameters.AddWithValue("@p8", araba.ResimYolu);
+
+                    // ExecuteNonQuery yerine ExecuteScalar kullanıyoruz (Tek bir değer/ID döneceği için)
+                    object sonuc = komut.ExecuteScalar();
+
+                    return Convert.ToInt32(sonuc); // Yeni oluşan ArabaID'yi döndür!
+                }
+            }
+        }
+        public void ResimEkle(AracResim resim)
+        {
+            using (SqlConnection baglanti = new SqlConnection(Baglanti.Adres))
+            {
+                if (baglanti.State == System.Data.ConnectionState.Closed) baglanti.Open();
+
+                string sorgu = "INSERT INTO Tbl_AracResimleri (ArabaID, ResimYolu) VALUES (@p1, @p2)";
+
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+                    komut.Parameters.AddWithValue("@p1", resim.ArabaID);
+                    komut.Parameters.AddWithValue("@p2", resim.ResimYolu);
+
+                    komut.ExecuteNonQuery();
                 }
             }
         }

@@ -40,7 +40,7 @@ namespace BisarogluOtoGaleri.Business
             // Veritabanına sadece dosya adını kaydedeceğiz (Klasör yolu dinamik olabilir)
             return yeniDosyaAdi;
         }
-        public void ArabaEkle(Araba araba)
+        public int ArabaEkle(Araba araba)
         {
             // 1. Validasyon (Doğrulama) Kuralları
             if (araba.Fiyat <= 0)
@@ -59,6 +59,13 @@ namespace BisarogluOtoGaleri.Business
 
             // 3. Veritabanına Kayıt
             _arabaDal.ArabaEkle(araba);
+            return _arabaDal.ArabaEkle(araba);
         }
+        public void ResimEkle(AracResim resim)
+        {
+            // DAL katmanındaki metodu çağırıyoruz
+            _arabaDal.ResimEkle(resim);
+        }
+
     }
 }

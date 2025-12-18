@@ -10,13 +10,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.Generic; // <-- BU SATIR ŞART!
+using System.IO;
 
 namespace BisarogluOtoGaleri
 {
     public partial class FrmAracDetay : Form
     {
         ArabaManager _manager;
-        string _secilenKaynakDosyaYolu = "";
+        List<string> _secilenDosyaYollari = new List<string>();
         public FrmAracDetay()
         {
             InitializeComponent();
@@ -26,6 +28,29 @@ namespace BisarogluOtoGaleri
         private void FrmAracDetay_Load(object sender, EventArgs e)
         {
 
+        }
+        private void btnResimSec_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Title = "Araç Resimlerini Seçin";
+            openFileDialog1.Multiselect = true; // Çoklu seçim açık
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                // Listeyi temizle
+                _secilenDosyaYollari.Clear();
+
+                // Yeni seçilenleri listeye ekle
+                _secilenDosyaYollari.AddRange(openFileDialog1.FileNames);
+
+                // Kullanıcıya bilgi ver
+                MessageBox.Show($"{_secilenDosyaYollari.Count} adet resim seçildi.");
+
+                // İlk resmi göster
+                if (_secilenDosyaYollari.Count > 0)
+                {
+                    pbxAracResim.ImageLocation = _secilenDosyaYollari[0];
+                }
+            }
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)
@@ -39,49 +64,64 @@ namespace BisarogluOtoGaleri
                 yeniAraba.MarkaID = int.Parse(txtMarka.Text);
                 yeniAraba.ModelID = int.Parse(txtModel.Text);
                 yeniAraba.Yil = int.Parse(txtYil.Text);
+                yeniAraba.MarkaID = int.Parse(txtMarka.Text);
                 yeniAraba.Kilometre = int.Parse(txtKilometre.Text);
-
-                // Fiyat boş bırakılırsa veya 0 girilirse Backend'deki AI/Hesaplayıcı devreye girecek!
+                yeniAraba.VitesTipi = cmbVites.Text;
+                yeniAraba.YakitTuru = cmbYakit.Text;
+                yeniAraba.AgirHasarKayitliMi = chkAgirHasar.Checked;
                 decimal fiyat;
                 decimal.TryParse(txtFiyat.Text, out fiyat);
                 yeniAraba.Fiyat = fiyat;
 
-                yeniAraba.VitesTipi = cmbVites.Text;
-                yeniAraba.YakitTuru = cmbYakit.Text;
-                yeniAraba.AgirHasarKayitliMi = chkAgirHasar.Checked;
-                string kaydedilenResimAdi = _manager.ResimDosyasiniYonet(_secilenKaynakDosyaYolu);
+                if (_secilenDosyaYollari.Count > 0)
+                {
+                    // Değişkeni burada oluşturuyoruz: Adı 'kapakResimAdi'
+                    string kapakResimAdi = _manager.ResimDosyasiniYonet(_secilenDosyaYollari[0]);
+
+                    // Oluşturduğumuz değişkeni buraya veriyoruz (İsimler aynı!)
+                    yeniAraba.ResimYolu = kapakResimAdi;
+                }
+                else
+                {
+                    yeniAraba.ResimYolu = ""; // Resim seçilmediyse boş geç
+                }
+
+
+
 
                 // Sabit değerler (Şimdilik)
-                yeniAraba.ResimYolu = kaydedilenResimAdi;
+                
                 yeniAraba.Durum = "Satılık";
                 yeniAraba.DegisenParcaSayisi = 0;
                 yeniAraba.BoyaliParcaSayisi = 0;
 
+                
+                int yeniArabaID = _manager.ArabaEkle(yeniAraba);
                 // 2. Manager'a gönder
-                _manager.ArabaEkle(yeniAraba);
+                //_manager.ArabaEkle(yeniAraba);
 
-                MessageBox.Show("Araba ve resmi başarıyla eklendi!", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                foreach (string dosyaYolu in _secilenDosyaYollari)
+                {
+                    // Dosyayı kopyala
+                    string kaydedilenAd = _manager.ResimDosyasiniYonet(dosyaYolu);
+
+                    // Resim nesnesini oluştur
+                    AracResim resim = new AracResim();
+                    resim.ArabaID = yeniArabaID; // ID bağlantısını kurduk!
+                    resim.ResimYolu = kaydedilenAd;
+
+                    // Veritabanına ekle
+                    _manager.ResimEkle(resim);
+                }
+                MessageBox.Show("İşlem Başarılı!");
                 this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Hata: " + ex.Message);
             }
         }
 
-        private void btnResimSec_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Title = "Araç Resmini Seçin";
-
-            // Diyalog açıldı ve kullanıcı bir dosya seçip OK dedi mi?
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                // 1. Seçilen dosyanın tam yolunu al
-                _secilenKaynakDosyaYolu = openFileDialog1.FileName;
-
-                // 2. Resmi PictureBox'ta göster (Önizleme)
-                pbxAracResim.ImageLocation = _secilenKaynakDosyaYolu;
-            }
-        }
+        
     }
 }

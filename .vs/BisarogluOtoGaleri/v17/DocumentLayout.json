@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\dataaccess\\arabadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:dataaccess\\arabadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\frmaracdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:frmaracdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\business\\arabamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:business\\arabamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\entity\\aracresim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:entity\\aracresim.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|c:\\users\\dogus\\source\\repos\\bisarogluotogaleri\\dataaccess\\arabadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|solutionrelative:dataaccess\\arabadal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7D4BEF2E-43F1-4D04-994E-9A443F0F26EB}|BisarogluOtoGaleri.csproj|C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\frmaracdetay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -110,62 +114,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "AracResim.cs",
+              "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Entity\\AracResim.cs",
+              "RelativeDocumentMoniker": "Entity\\AracResim.cs",
+              "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Entity\\AracResim.cs",
+              "RelativeToolTip": "Entity\\AracResim.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-18T14:17:14.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "FrmAracDetay.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracDetay.cs",
               "RelativeDocumentMoniker": "FrmAracDetay.cs",
               "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracDetay.cs",
               "RelativeToolTip": "FrmAracDetay.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAEwDQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwFwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-17T08:46:45.299Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ArabaManager.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\ArabaManager.cs",
               "RelativeDocumentMoniker": "Business\\ArabaManager.cs",
               "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\ArabaManager.cs",
               "RelativeToolTip": "Business\\ArabaManager.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAqwCkAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T19:34:31.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ArabaDal.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\ArabaDal.cs",
               "RelativeDocumentMoniker": "DataAccess\\ArabaDal.cs",
               "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\ArabaDal.cs",
               "RelativeToolTip": "DataAccess\\ArabaDal.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAowEkAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAgwGIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-13T19:33:54.282Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FrmAracDetay.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracDetay.cs",
               "RelativeDocumentMoniker": "FrmAracDetay.cs",
               "ToolTip": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracDetay.cs [Tasar\u0131m]",
               "RelativeToolTip": "FrmAracDetay.cs [Tasar\u0131m]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T08:43:01.751Z",
-              "EditorCaption": " [Tasar\u0131m]"
+              "WhenOpened": "2025-12-17T08:43:01.751Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Araba.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Entity\\Araba.cs",
               "RelativeDocumentMoniker": "Entity\\Araba.cs",
@@ -173,12 +189,11 @@
               "RelativeToolTip": "Entity\\Araba.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAgwBIAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-13T19:29:10.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-13T19:29:10.015Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "FrmAracListesi.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracListesi.cs",
               "RelativeDocumentMoniker": "FrmAracListesi.cs",
@@ -191,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Baglanti.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\Baglanti.cs",
               "RelativeDocumentMoniker": "DataAccess\\Baglanti.cs",
@@ -199,12 +214,11 @@
               "RelativeToolTip": "DataAccess\\Baglanti.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-09T13:07:32.91Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-09T13:07:32.91Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "FrmAnaSayfa.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAnaSayfa.cs",
               "RelativeDocumentMoniker": "FrmAnaSayfa.cs",
@@ -215,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "FrmAnaSayfa.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAnaSayfa.cs",
               "RelativeDocumentMoniker": "FrmAnaSayfa.cs",
@@ -223,12 +237,11 @@
               "RelativeToolTip": "FrmAnaSayfa.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwCoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T07:34:42.464Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T07:34:42.464Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "FrmAnaSayfa.Designer.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAnaSayfa.Designer.cs",
               "RelativeDocumentMoniker": "FrmAnaSayfa.Designer.cs",
@@ -240,7 +253,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "FrmAracListesi.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\FrmAracListesi.cs",
               "RelativeDocumentMoniker": "FrmAracListesi.cs",
@@ -251,7 +264,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "LoginForm.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
@@ -262,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.cs",
               "RelativeDocumentMoniker": "LoginForm.cs",
@@ -274,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "LoginForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.Designer.cs",
               "RelativeDocumentMoniker": "LoginForm.Designer.cs",
@@ -286,7 +299,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "LoginForm.resx",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\LoginForm.resx",
               "RelativeDocumentMoniker": "LoginForm.resx",
@@ -297,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "SplashScreen.Designer.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\SplashScreen.Designer.cs",
               "RelativeDocumentMoniker": "SplashScreen.Designer.cs",
@@ -309,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -321,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "SplashScreen.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\SplashScreen.cs",
               "RelativeDocumentMoniker": "SplashScreen.cs",
@@ -334,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "SplashScreen.cs [Tasar\u0131m]",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\SplashScreen.cs",
               "RelativeDocumentMoniker": "SplashScreen.cs",
@@ -345,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "MusteriDal.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\DataAccess\\MusteriDal.cs",
               "RelativeDocumentMoniker": "DataAccess\\MusteriDal.cs",
@@ -357,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "BisarogluOtoGaleri.csproj",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\BisarogluOtoGaleri.csproj",
               "RelativeDocumentMoniker": "BisarogluOtoGaleri.csproj",
@@ -369,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "IFiyatHesaplayici.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\IFiyatHesaplayici.cs",
               "RelativeDocumentMoniker": "Business\\IFiyatHesaplayici.cs",
@@ -381,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "BasitFiyatHesaplayici.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\BasitFiyatHesaplayici.cs",
               "RelativeDocumentMoniker": "Business\\BasitFiyatHesaplayici.cs",
@@ -393,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "Musteri.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Entity\\Musteri.cs",
               "RelativeDocumentMoniker": "Entity\\Musteri.cs",
@@ -405,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "MusteriManager.cs",
               "DocumentMoniker": "C:\\Users\\dogus\\source\\repos\\BisarogluOtoGaleri\\Business\\MusteriManager.cs",
               "RelativeDocumentMoniker": "Business\\MusteriManager.cs",
