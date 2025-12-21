@@ -41,6 +41,7 @@ namespace BisarogluOtoGaleri
             btnGenelRapor = new BarButtonItem();
             ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             Müş = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             btnSatisYap = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -48,7 +49,6 @@ namespace BisarogluOtoGaleri
             ribbonPageRaporlar = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
             SuspendLayout();
             // 
@@ -61,7 +61,7 @@ namespace BisarogluOtoGaleri
             ribbon.MaxItemId = 8;
             ribbon.Name = "ribbon";
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPage1, ribbonPage2, btnSatisYap, ribbonPageRaporlar });
-            ribbon.Size = new Size(724, 158);
+            ribbon.Size = new Size(765, 158);
             ribbon.StatusBar = ribbonStatusBar;
             // 
             // btnAracListesi
@@ -141,6 +141,12 @@ namespace BisarogluOtoGaleri
             ribbonPageGroup1.Name = "ribbonPageGroup1";
             ribbonPageGroup1.Text = "Araç İşlemleri";
             // 
+            // ribbonPageGroup2
+            // 
+            ribbonPageGroup2.ItemLinks.Add(btnYeniArac);
+            ribbonPageGroup2.Name = "ribbonPageGroup2";
+            ribbonPageGroup2.Text = "ribbonPageGroup2";
+            // 
             // ribbonPage2
             // 
             ribbonPage2.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { Müş });
@@ -181,16 +187,10 @@ namespace BisarogluOtoGaleri
             // 
             // ribbonStatusBar
             // 
-            ribbonStatusBar.Location = new Point(0, 479);
+            ribbonStatusBar.Location = new Point(0, 508);
             ribbonStatusBar.Name = "ribbonStatusBar";
             ribbonStatusBar.Ribbon = ribbon;
-            ribbonStatusBar.Size = new Size(724, 24);
-            // 
-            // ribbonPageGroup2
-            // 
-            ribbonPageGroup2.ItemLinks.Add(btnYeniArac);
-            ribbonPageGroup2.Name = "ribbonPageGroup2";
-            ribbonPageGroup2.Text = "ribbonPageGroup2";
+            ribbonStatusBar.Size = new Size(765, 24);
             // 
             // FrmAnaSayfa
             // 
@@ -198,7 +198,7 @@ namespace BisarogluOtoGaleri
             Appearance.Options.UseBackColor = true;
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(724, 503);
+            ClientSize = new Size(765, 532);
             Controls.Add(ribbonStatusBar);
             Controls.Add(ribbon);
             IsMdiContainer = true;

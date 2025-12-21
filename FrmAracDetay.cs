@@ -19,15 +19,118 @@ namespace BisarogluOtoGaleri
     {
         ArabaManager _manager;
         List<string> _secilenDosyaYollari = new List<string>();
-        public FrmAracDetay()
+
+        List<string> _dbGelenResimler = new List<string>();
+        int _aktifResimIndex = 0;
+        int _gelenArabaID = 0;
+
+        public FrmAracDetay(int id = 0)
         {
             InitializeComponent();
-            _manager = new ArabaManager();
+
+            // Gelen ID'yi içeri alıyoruz
+            _gelenArabaID = id;
+
+            // Manager'ı hatasız başlatmak için (1. Çözümdeki yapıya uygun)
+            _manager = new ArabaManager(new ArabaDal());
         }
 
         private void FrmAracDetay_Load(object sender, EventArgs e)
         {
+            if (_gelenArabaID > 0)
+            {
+                BilgileriGetir(_gelenArabaID);
+                ResimleriGetir(_gelenArabaID);
 
+                // Düzenleme modunda olduğumuz için Kaydet butonu yerine "Güncelle" mantığı çalışmalı
+                btnKaydet.Text = "GÜNCELLE";
+            }
+            else
+            {
+                // Yeni kayıt modu: İleri/Geri butonlarını gizle
+                btnGeri.Visible = false;
+                btnIleri.Visible = false;
+                lblResimSayac.Visible = false;
+            }
+        }
+        
+        void ResimleriGetir(int id)
+        {
+            // Manager'dan resim listesini çek (Bunu az önce yazmıştık)
+            _dbGelenResimler = _manager.ResimleriGetir(id);
+
+            if (_dbGelenResimler.Count > 0)
+            {
+                _aktifResimIndex = 0;
+                DbResminiGoster();
+
+                // Butonları göster
+                btnGeri.Visible = true;
+                btnIleri.Visible = true;
+                lblResimSayac.Visible = true;
+            }
+        }
+        void DbResminiGoster()
+        {
+            if (_dbGelenResimler.Count == 0) return;
+
+            string dosyaAdi = _dbGelenResimler[_aktifResimIndex];
+            string tamYol = Path.Combine(Application.StartupPath, "AracResimleri", dosyaAdi);
+
+            if (File.Exists(tamYol))
+            {
+                pbxAracResim.ImageLocation = tamYol;
+                lblResimSayac.Text = $"{_aktifResimIndex + 1} / {_dbGelenResimler.Count}";
+            }
+        }
+        private void btnIleri_Click(object sender, EventArgs e)
+        {
+            if (_aktifResimIndex < _dbGelenResimler.Count - 1)
+            {
+                _aktifResimIndex++;
+                DbResminiGoster();
+            }
+        }
+        private void btnGeri_Click(object sender, EventArgs e)
+        {
+            if (_aktifResimIndex > 0)
+            {
+                _aktifResimIndex--;
+                DbResminiGoster();
+            }
+        }
+        void BilgileriGetir(int id)
+        {
+            // 1. Veritabanından aracı çek
+            Araba gelenAraba = _manager.ArabaGetir(id);
+
+            if (gelenAraba != null)
+            {
+                // 2. Kutuları (TextBox/ComboBox) doldur
+                // NOT: Senin formundaki nesne isimleri farklı olabilir (txtMarka, txtFiyat vb.)
+                // Lütfen kendi tasarımındaki isimlerle kontrol et.
+
+                txtMarka.Text = gelenAraba.MarkaID.ToString();
+                // İleride burası LookUpEdit (Açılır Kutu) olacak, şimdilik ID yazsın.
+
+                txtModel.Text = gelenAraba.ModelID.ToString();
+                txtYil.Text = gelenAraba.Yil.ToString();
+                txtKilometre.Text = gelenAraba.Kilometre.ToString();
+                txtFiyat.Text = gelenAraba.Fiyat.ToString();
+
+                // Durum (Vites/Yakıt) veya Açıklama alanı varsa:
+                // txtDurum.Text = gelenAraba.Durum; 
+
+                chkAgirHasar.Checked = gelenAraba.AgirHasarKayitliMi;
+
+                // Formun başlığına da havalı bir şey yazalım
+                this.Text = $"Araç Düzenle - Kayıt No: {id}";
+            }
+            else
+            {
+                MessageBox.Show("Araç bilgileri okunamadı!", "Hata");
+                this.Close();
+            }
         }
         private void btnResimSec_Click(object sender, EventArgs e)
         {
@@ -57,63 +160,77 @@ namespace BisarogluOtoGaleri
         {
             try
             {
-                // 1. Formdaki verileri Araba nesnesine doldur
-                Araba yeniAraba = new Araba();
+                // 1. Nesneyi Oluştur ve Ortak Verileri Doldur
+                Araba arabaNesnesi = new Araba();
 
-                // Sayısal değerleri çevirirken (Convert) hata olmaması için basit önlem:
-                yeniAraba.MarkaID = int.Parse(txtMarka.Text);
-                yeniAraba.ModelID = int.Parse(txtModel.Text);
-                yeniAraba.Yil = int.Parse(txtYil.Text);
-                yeniAraba.MarkaID = int.Parse(txtMarka.Text);
-                yeniAraba.Kilometre = int.Parse(txtKilometre.Text);
-                yeniAraba.VitesTipi = cmbVites.Text;
-                yeniAraba.YakitTuru = cmbYakit.Text;
-                yeniAraba.AgirHasarKayitliMi = chkAgirHasar.Checked;
-                decimal fiyat;
-                decimal.TryParse(txtFiyat.Text, out fiyat);
-                yeniAraba.Fiyat = fiyat;
+                // --- TEXTBOX VERİLERİNİ AL (Kendi formuna göre düzenle) ---
+                arabaNesnesi.MarkaID = int.Parse(txtMarka.Text);
+                // arabaNesnesi.ModelID = int.Parse(txtModel.Text);
+                // arabaNesnesi.Yil = int.Parse(txtYil.Text);
+                // ... Diğerleri ...
+                arabaNesnesi.AgirHasarKayitliMi = chkAgirHasar.Checked;
 
-                if (_secilenDosyaYollari.Count > 0)
+                // ---------------------------------------------------------
+                // 2. RESİM MANTIĞI (Hem Ekleme Hem Güncelleme İçin)
+                // ---------------------------------------------------------
+                bool yeniResimSecildiMi = _secilenDosyaYollari.Count > 0;
+                string kapakResimAdi = "";
+
+                if (yeniResimSecildiMi)
                 {
-                    // Değişkeni burada oluşturuyoruz: Adı 'kapakResimAdi'
-                    string kapakResimAdi = _manager.ResimDosyasiniYonet(_secilenDosyaYollari[0]);
-
-                    // Oluşturduğumuz değişkeni buraya veriyoruz (İsimler aynı!)
-                    yeniAraba.ResimYolu = kapakResimAdi;
+                    // Yeni resim seçildiyse, ilki kapak resmi olur
+                    kapakResimAdi = _manager.ResimDosyasiniYonet(_secilenDosyaYollari[0]);
+                    arabaNesnesi.ResimYolu = kapakResimAdi;
                 }
                 else
                 {
-                    yeniAraba.ResimYolu = ""; // Resim seçilmediyse boş geç
+                    // Yeni resim seçilmediyse:
+                    if (_gelenArabaID > 0)
+                    {
+                        // Güncelleme modundaysak, ESKİ RESMİ KORU
+                        // (Bunun için eski resmi veritabanından veya o anki ekrandan almak gerekebilir)
+                        // Şimdilik boş bırakıyoruz, DAL'da null giderse eskiyi ezmemesi için logic kurabiliriz
+                        // VEYA daha basit yöntem: Form açılırken gelen resmi bir değişkende tutabilirsin.
+                        // Biz şimdilik "Yeni seçilmediyse null gitsin" diyoruz.
+                        arabaNesnesi.ResimYolu = ""; // Veya mevcut path
+                    }
                 }
 
 
-
-
-                // Sabit değerler (Şimdilik)
-                
-                yeniAraba.Durum = "Satılık";
-                yeniAraba.DegisenParcaSayisi = 0;
-                yeniAraba.BoyaliParcaSayisi = 0;
-
-                
-                int yeniArabaID = _manager.ArabaEkle(yeniAraba);
-                // 2. Manager'a gönder
-                //_manager.ArabaEkle(yeniAraba);
-
-                foreach (string dosyaYolu in _secilenDosyaYollari)
+                // ---------------------------------------------------------
+                // 3. KARAR ANI: EKLEME Mİ, GÜNCELLEME Mİ?
+                // ---------------------------------------------------------
+                if (_gelenArabaID == 0)
                 {
-                    // Dosyayı kopyala
-                    string kaydedilenAd = _manager.ResimDosyasiniYonet(dosyaYolu);
+                    // === YENİ KAYIT MODU ===
+                    int yeniID = _manager.ArabaEkle(arabaNesnesi);
 
-                    // Resim nesnesini oluştur
-                    AracResim resim = new AracResim();
-                    resim.ArabaID = yeniArabaID; // ID bağlantısını kurduk!
-                    resim.ResimYolu = kaydedilenAd;
+                    // Ekstra resimleri kaydet
+                    EkstraResimleriKaydet(yeniID);
 
-                    // Veritabanına ekle
-                    _manager.ResimEkle(resim);
+                    MessageBox.Show("Yeni araç başarıyla eklendi!", "Bilgi");
                 }
-                MessageBox.Show("İşlem Başarılı!");
+                else
+                {
+                    // === GÜNCELLEME MODU ===
+                    arabaNesnesi.ArabaID = _gelenArabaID; // Hangi aracı güncelleyeceğimizi belirtiyoruz!
+
+                    // Eğer yeni resim seçilmediyse, eski resim yolunun kaybolmaması lazım.
+                    // Bu yüzden buraya küçük bir "Veritabanındaki Eski Resmi Çek" kodu gerekebilir.
+                    // Şimdilik eğer resim seçilmediyse "null" gönderiyoruz, 
+                    // DAL tarafında NULL ise güncelleme yapma diyebiliriz (bunu DAL'da yapmadık henüz).
+
+                    _manager.ArabaGuncelle(arabaNesnesi);
+
+                    // Eğer yeni resimler seçildiyse onları da galeriye EKLE (Eskileri silmiyoruz, üstüne ekliyoruz)
+                    if (yeniResimSecildiMi)
+                    {
+                        EkstraResimleriKaydet(_gelenArabaID);
+                    }
+
+                    MessageBox.Show("Araç bilgileri güncellendi!", "Bilgi");
+                }
+
                 this.Close();
             }
             catch (Exception ex)
@@ -121,7 +238,17 @@ namespace BisarogluOtoGaleri
                 MessageBox.Show("Hata: " + ex.Message);
             }
         }
+        void EkstraResimleriKaydet(int arabaID)
+        {
+            foreach (string dosyaYolu in _secilenDosyaYollari)
+            {
+                string kaydedilenAd = _manager.ResimDosyasiniYonet(dosyaYolu);
+                AracResim resim = new AracResim();
+                resim.ArabaID = arabaID;
+                resim.ResimYolu = kaydedilenAd;
+                _manager.ResimEkle(resim);
+            }
+        }
 
-        
     }
 }

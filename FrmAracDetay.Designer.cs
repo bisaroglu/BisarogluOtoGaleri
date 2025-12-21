@@ -40,6 +40,9 @@
             pbxAracResim = new PictureBox();
             btnResimSec = new Button();
             openFileDialog1 = new OpenFileDialog();
+            btnGeri = new Button();
+            btnIleri = new Button();
+            lblResimSayac = new Label();
             ((System.ComponentModel.ISupportInitialize)pbxAracResim).BeginInit();
             SuspendLayout();
             // 
@@ -126,18 +129,18 @@
             pbxAracResim.BorderStyle = BorderStyle.FixedSingle;
             pbxAracResim.Location = new Point(31, 39);
             pbxAracResim.Name = "pbxAracResim";
-            pbxAracResim.Size = new Size(153, 103);
+            pbxAracResim.Size = new Size(222, 144);
             pbxAracResim.SizeMode = PictureBoxSizeMode.StretchImage;
             pbxAracResim.TabIndex = 10;
             pbxAracResim.TabStop = false;
             // 
             // btnResimSec
             // 
-            btnResimSec.Location = new Point(113, 213);
+            btnResimSec.Location = new Point(138, 275);
             btnResimSec.Name = "btnResimSec";
             btnResimSec.Size = new Size(104, 23);
             btnResimSec.TabIndex = 11;
-            btnResimSec.Text = "Resim Seç...";
+            btnResimSec.Text = "Resim Ekle";
             btnResimSec.UseVisualStyleBackColor = true;
             btnResimSec.Click += btnResimSec_Click;
             // 
@@ -146,11 +149,41 @@
             openFileDialog1.FileName = "openFileDialog1";
             openFileDialog1.Filter = "Resim Dosyaları|*.jpg;*.jpeg;*.png;*.bmp";
             // 
+            // btnGeri
+            // 
+            btnGeri.Location = new Point(31, 218);
+            btnGeri.Name = "btnGeri";
+            btnGeri.Size = new Size(75, 23);
+            btnGeri.TabIndex = 12;
+            btnGeri.Text = "<";
+            btnGeri.UseVisualStyleBackColor = true;
+            // 
+            // btnIleri
+            // 
+            btnIleri.Location = new Point(167, 218);
+            btnIleri.Name = "btnIleri";
+            btnIleri.Size = new Size(75, 23);
+            btnIleri.TabIndex = 13;
+            btnIleri.Text = ">";
+            btnIleri.UseVisualStyleBackColor = true;
+            // 
+            // lblResimSayac
+            // 
+            lblResimSayac.AutoSize = true;
+            lblResimSayac.Location = new Point(121, 222);
+            lblResimSayac.Name = "lblResimSayac";
+            lblResimSayac.Size = new Size(30, 15);
+            lblResimSayac.TabIndex = 14;
+            lblResimSayac.Text = "0 / 0";
+            // 
             // FrmAracDetay
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblResimSayac);
+            Controls.Add(btnIleri);
+            Controls.Add(btnGeri);
             Controls.Add(btnResimSec);
             Controls.Add(pbxAracResim);
             Controls.Add(chkAgirHasar);
@@ -186,5 +219,8 @@
         private PictureBox pbxAracResim;
         private Button btnResimSec;
         private OpenFileDialog openFileDialog1;
+        private Button btnGeri;
+        private Button btnIleri;
+        private Label lblResimSayac;
     }
 }

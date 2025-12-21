@@ -7,7 +7,14 @@ namespace BisarogluOtoGaleri.Business
 {
     public class ArabaManager
     {
-        ArabaDal _arabaDal = new ArabaDal();
+        ArabaDal _arabaDal;
+
+        // --- BU METODU EKLE VEYA GÜNCELLE ---
+        // Bu 'Constructor' (Yapıcı Metot) sayesinde Manager başlatılırken DAL'ı da alıyor.
+        public ArabaManager(ArabaDal arabaDal)
+        {
+            _arabaDal = arabaDal;
+        }
         public List<Araba> TumArabalariGetir()
         {
             // Burada ileride "Sadece Satılık olanları getir" gibi iş kuralları yazabiliriz.
@@ -66,6 +73,18 @@ namespace BisarogluOtoGaleri.Business
             // DAL katmanındaki metodu çağırıyoruz
             _arabaDal.ResimEkle(resim);
         }
-
+        public List<string> ResimleriGetir(int arabaID)
+        {
+            return _arabaDal.ResimleriGetir(arabaID);
+        }
+        public void ArabaGuncelle(Araba araba)
+        {
+            // İleride buraya "Fiyat 0 olamaz" gibi kurallar ekleyebiliriz.
+            _arabaDal.ArabaGuncelle(araba);
+        }
+        public Araba ArabaGetir(int id)
+        {
+            return _arabaDal.ArabaGetir(id);
+        }
     }
 }
