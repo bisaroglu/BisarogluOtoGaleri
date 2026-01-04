@@ -1,4 +1,8 @@
-﻿using System;
+﻿using DevExpress.XtraBars;
+using DevExpress.XtraBars.Ribbon;
+using System;
+using System.Drawing;
+using System.Windows.Controls.Ribbon;
 using System.Windows.Forms;
 using DevExpress.XtraBars;
 
@@ -8,6 +12,7 @@ namespace BisarogluOtoGaleri
     {
         private void btnAracListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            pictureBox1.Hide();
             foreach (Form form in this.MdiChildren)
             {
                 if (form is FrmAracListesi) // Eğer form zaten açıksa
@@ -51,6 +56,7 @@ namespace BisarogluOtoGaleri
         {
             InitializeComponent();
             _gelenRol = rol;
+
         }
 
         // --- FORM YÜKLENİRKEN (LOAD EVENT) ---
@@ -72,6 +78,11 @@ namespace BisarogluOtoGaleri
                     ribbonPageRaporlar.Visible = false;
                 }
             }
+        }
+
+        private void ribbon_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

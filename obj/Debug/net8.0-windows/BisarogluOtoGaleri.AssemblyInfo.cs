@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BisarogluOtoGaleri")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88eb4770caa994e6b9ac33b24622effc05abd5d1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7dc2befd2ddd1f8f34db1aed191453d78af3ae9d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BisarogluOtoGaleri")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BisarogluOtoGaleri")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -86,5 +86,17 @@ namespace BisarogluOtoGaleri.Business
         {
             return _arabaDal.ArabaGetir(id);
         }
+        public List<Marka> MarkalariGetir()
+        {
+            // İşi DAL katmanına devrediyoruz
+            return _arabaDal.MarkalariGetir();
+        }
+
+        // 2. Seçilen Markaya Göre Modelleri Getir
+        public List<Model> ModelleriGetir(int markaID)
+        {
+            // İşi DAL katmanına devrediyoruz
+            return _arabaDal.ModelleriGetir(markaID);
+        }
     }
 }

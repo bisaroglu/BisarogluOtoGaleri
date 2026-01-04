@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using BisarogluOtoGaleri.Business; // Manager için gerekli
 using BisarogluOtoGaleri.DataAccess; // Dal için (Gerekirse)
@@ -21,6 +22,7 @@ namespace BisarogluOtoGaleri
         private void FrmAracListesi_Load(object sender, EventArgs e)
         {
             Listele();
+            gridView1_FocusedRowChanged(null, null);
         }
 
         public void Listele()
@@ -33,7 +35,7 @@ namespace BisarogluOtoGaleri
             GridAyarlari();
         }
 
-        
+
         void GridAyarlari()
         {
             var view = gridView1;
@@ -96,6 +98,73 @@ namespace BisarogluOtoGaleri
                 FrmAracDetay frm = new FrmAracDetay(id);
                 frm.ShowDialog();
                 Listele(); // Form kapanınca gridi yenile (Fiyat değişmiş olabilir)
+            }
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            // 1. Seçili Araba ID'yi al
+            var idDegeri = gridView1.GetRowCellValue(e.FocusedRowHandle, "ArabaID");
+
+            // ID yoksa veya null ise metoddan çık (Hata önleyici)
+            if (idDegeri == null) return;
+
+            int arabaID = Convert.ToInt32(idDegeri);
+
+            // 2. Veritabanından resimleri getir
+            // Not: Manager'da bu metodun olduğundan eminiz (önceki adımlarda yaptık)
+            List<string> resimListesi = _manager.ResimleriGetir(arabaID);
+
+            // 3. YENİ DİZİ: Sadece 4 küçük kutuyu tanımlıyoruz
+            DevExpress.XtraEditors.PictureEdit[] kutular = { peK1, peK2, peK3, peK4 };
+
+            // 4. Döngü Limiti: 4 (Kutu sayısı kadar)
+            for (int i = 0; i < 4; i++)
+            {
+                if (i < resimListesi.Count)
+                {
+                    // Resim varsa kutuya yükle
+                    ResmiKutuyaYukle(kutular[i], resimListesi[i]);
+                }
+                else
+                {
+                    // Resim yoksa kutuyu temizle (Boş/Gri kalsın)
+                    ResmiKutuyaYukle(kutular[i], null);
+                }
+            }
+        }
+        void ResmiKutuyaYukle(DevExpress.XtraEditors.PictureEdit kutu, string dosyaAdi)
+        {
+            if (kutu == null) return; // Güvenlik önlemi
+
+            if (string.IsNullOrEmpty(dosyaAdi))
+            {
+                kutu.Image = null;
+                return;
+            }
+
+            string tamYol = Path.Combine(Application.StartupPath, "AracResimleri", dosyaAdi);
+
+            if (File.Exists(tamYol))
+            {
+                using (var stream = new FileStream(tamYol, FileMode.Open, FileAccess.Read))
+                {
+                    kutu.Image = Image.FromStream(stream);
+                }
+            }
+            else
+            {
+                kutu.Image = null;
             }
         }
     }

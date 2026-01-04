@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtMarka = new TextBox();
-            txtModel = new TextBox();
             txtYil = new TextBox();
             txtKilometre = new TextBox();
             txtFiyat = new TextBox();
@@ -43,24 +41,12 @@
             btnGeri = new Button();
             btnIleri = new Button();
             lblResimSayac = new Label();
+            lkeMarka = new DevExpress.XtraEditors.LookUpEdit();
+            lkeModel = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)pbxAracResim).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lkeMarka.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)lkeModel.Properties).BeginInit();
             SuspendLayout();
-            // 
-            // txtMarka
-            // 
-            txtMarka.Location = new Point(319, 73);
-            txtMarka.Name = "txtMarka";
-            txtMarka.Size = new Size(100, 23);
-            txtMarka.TabIndex = 0;
-            txtMarka.Text = "Marka ID:";
-            // 
-            // txtModel
-            // 
-            txtModel.Location = new Point(319, 102);
-            txtModel.Name = "txtModel";
-            txtModel.Size = new Size(100, 23);
-            txtModel.TabIndex = 1;
-            txtModel.Text = "Model ID:";
             // 
             // txtYil
             // 
@@ -176,11 +162,35 @@
             lblResimSayac.TabIndex = 14;
             lblResimSayac.Text = "0 / 0";
             // 
+            // lkeMarka
+            // 
+            lkeMarka.Location = new Point(319, 65);
+            lkeMarka.Name = "lkeMarka";
+            lkeMarka.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            lkeMarka.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            lkeMarka.Properties.NullText = "Marka";
+            lkeMarka.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            lkeMarka.Size = new Size(100, 20);
+            lkeMarka.TabIndex = 15;
+            lkeMarka.EditValueChanged += lkeMarka_EditValueChanged;
+            // 
+            // lkeModel
+            // 
+            lkeModel.Location = new Point(319, 91);
+            lkeModel.Name = "lkeModel";
+            lkeModel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            lkeModel.Properties.NullText = "Model";
+            lkeModel.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
+            lkeModel.Size = new Size(100, 20);
+            lkeModel.TabIndex = 16;
+            // 
             // FrmAracDetay
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lkeModel);
+            Controls.Add(lkeMarka);
             Controls.Add(lblResimSayac);
             Controls.Add(btnIleri);
             Controls.Add(btnGeri);
@@ -193,22 +203,19 @@
             Controls.Add(txtFiyat);
             Controls.Add(txtKilometre);
             Controls.Add(txtYil);
-            Controls.Add(txtModel);
-            Controls.Add(txtMarka);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "FrmAracDetay";
             StartPosition = FormStartPosition.CenterParent;
             Text = "FrmAracDetay";
             Load += FrmAracDetay_Load;
             ((System.ComponentModel.ISupportInitialize)pbxAracResim).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lkeMarka.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)lkeModel.Properties).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private TextBox txtMarka;
-        private TextBox txtModel;
         private TextBox txtYil;
         private TextBox txtKilometre;
         private TextBox txtFiyat;
@@ -222,5 +229,7 @@
         private Button btnGeri;
         private Button btnIleri;
         private Label lblResimSayac;
+        private DevExpress.XtraEditors.LookUpEdit lkeMarka;
+        private DevExpress.XtraEditors.LookUpEdit lkeModel;
     }
 }

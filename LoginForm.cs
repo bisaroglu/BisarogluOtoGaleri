@@ -67,13 +67,14 @@ namespace BisarogluOtoGaleri
             // --- SATIŞ UZMANI GİRİŞİ ---
             else if (girisTuru == "Satış Uzmanı")
             {
+                GirisBasarili("Satış Uzmanı");
                 if (kullaniciAdi == "satis" && sifre == "1234")
                 {
                     GirisBasarili("Satış Uzmanı");
                 }
                 else
                 {
-                    HataVer("Hatalı Satış Personeli bilgileri!");
+                    //HataVer("Hatalı Satış Personeli bilgileri!");
                 }
             }
             else

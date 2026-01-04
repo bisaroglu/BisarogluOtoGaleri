@@ -1,18 +1,17 @@
 ﻿using BisarogluOtoGaleri.Business;
 using BisarogluOtoGaleri.DataAccess;
 using BisarogluOtoGaleri.Entity;
+using DevExpress.RichEdit.Core.Accessibility;
 using System;
-using System.Collections.Generic;
+using System.Collections.Generic; // <-- BU SATIR ŞART!
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections.Generic; // <-- BU SATIR ŞART!
-using System.IO;
-
 namespace BisarogluOtoGaleri
 {
     public partial class FrmAracDetay : Form
@@ -37,6 +36,10 @@ namespace BisarogluOtoGaleri
 
         private void FrmAracDetay_Load(object sender, EventArgs e)
         {
+            MarkalariYukle();
+            lkeModel.EditValue = null;
+            lkeModel.Properties.DataSource = null;
+
             if (_gelenArabaID > 0)
             {
                 BilgileriGetir(_gelenArabaID);
@@ -53,7 +56,44 @@ namespace BisarogluOtoGaleri
                 lblResimSayac.Visible = false;
             }
         }
-        
+        void MarkalariYukle()
+        {
+            var markalar = _manager.MarkalariGetir();
+
+            // LookUpEdit Ayarları (Bunları Kodla Yapıyoruz ki sağlam olsun)
+            lkeMarka.Properties.DataSource = markalar;
+            lkeMarka.Properties.DisplayMember = "MarkaAdi"; // Ekranda görünecek (String)
+            lkeMarka.Properties.ValueMember = "MarkaID";    // Arkada tutulacak (Int)
+
+            lkeMarka.Properties.NullText = "Marka Seçiniz...";
+            lkeMarka.Properties.PopulateColumns(); // Sütunları oluştur
+            lkeMarka.Properties.Columns["MarkaID"].Visible = false;
+        }
+        private void lkeMarka_EditValueChanged(object sender, EventArgs e)
+        {
+            // Seçilen Marka ID'yi al
+            if (lkeMarka.EditValue != null)
+            {
+                int secilenID = Convert.ToInt32(lkeMarka.EditValue);
+                var modeller = _manager.ModelleriGetir(secilenID);
+
+                lkeModel.Properties.DataSource = modeller;
+
+                // --- BU İKİ SATIR HAYATİ ÖNEM TAŞIR ---
+                lkeModel.Properties.DisplayMember = "ModelAdi"; // Ekranda 'X5' yazsın
+                lkeModel.Properties.ValueMember = "ModelID";    // Arkada '102' tutsun
+
+                // Gereksiz sütunları gizle (Opsiyonel ama şık durur)
+                lkeModel.Properties.PopulateColumns();
+                if (lkeModel.Properties.Columns["ModelID"] != null)
+                    lkeModel.Properties.Columns["ModelID"].Visible = false;
+                if (lkeModel.Properties.Columns["MarkaID"] != null)
+                    lkeModel.Properties.Columns["MarkaID"].Visible = false;
+
+                lkeModel.Properties.NullText = "Model Seçiniz";
+            }
+        }
+
         void ResimleriGetir(int id)
         {
             // Manager'dan resim listesini çek (Bunu az önce yazmıştık)
@@ -106,14 +146,8 @@ namespace BisarogluOtoGaleri
 
             if (gelenAraba != null)
             {
-                // 2. Kutuları (TextBox/ComboBox) doldur
-                // NOT: Senin formundaki nesne isimleri farklı olabilir (txtMarka, txtFiyat vb.)
-                // Lütfen kendi tasarımındaki isimlerle kontrol et.
-
-                txtMarka.Text = gelenAraba.MarkaID.ToString();
-                // İleride burası LookUpEdit (Açılır Kutu) olacak, şimdilik ID yazsın.
-
-                txtModel.Text = gelenAraba.ModelID.ToString();
+                lkeModel.EditValue = gelenAraba.ModelID;
+                lkeMarka.EditValue = gelenAraba.MarkaID;
                 txtYil.Text = gelenAraba.Yil.ToString();
                 txtKilometre.Text = gelenAraba.Kilometre.ToString();
                 txtFiyat.Text = gelenAraba.Fiyat.ToString();
@@ -164,15 +198,14 @@ namespace BisarogluOtoGaleri
                 Araba arabaNesnesi = new Araba();
 
                 // --- TEXTBOX VERİLERİNİ AL (Kendi formuna göre düzenle) ---
-                arabaNesnesi.MarkaID = int.Parse(txtMarka.Text);
-                // arabaNesnesi.ModelID = int.Parse(txtModel.Text);
-                // arabaNesnesi.Yil = int.Parse(txtYil.Text);
-                // ... Diğerleri ...
+                arabaNesnesi.MarkaID = Convert.ToInt32(lkeMarka.EditValue);
+                arabaNesnesi.ModelID = Convert.ToInt32(lkeModel.EditValue);
+
                 arabaNesnesi.AgirHasarKayitliMi = chkAgirHasar.Checked;
 
-                // ---------------------------------------------------------
+                
                 // 2. RESİM MANTIĞI (Hem Ekleme Hem Güncelleme İçin)
-                // ---------------------------------------------------------
+                
                 bool yeniResimSecildiMi = _secilenDosyaYollari.Count > 0;
                 string kapakResimAdi = "";
 
@@ -187,19 +220,14 @@ namespace BisarogluOtoGaleri
                     // Yeni resim seçilmediyse:
                     if (_gelenArabaID > 0)
                     {
-                        // Güncelleme modundaysak, ESKİ RESMİ KORU
-                        // (Bunun için eski resmi veritabanından veya o anki ekrandan almak gerekebilir)
-                        // Şimdilik boş bırakıyoruz, DAL'da null giderse eskiyi ezmemesi için logic kurabiliriz
-                        // VEYA daha basit yöntem: Form açılırken gelen resmi bir değişkende tutabilirsin.
-                        // Biz şimdilik "Yeni seçilmediyse null gitsin" diyoruz.
                         arabaNesnesi.ResimYolu = ""; // Veya mevcut path
                     }
                 }
 
 
-                // ---------------------------------------------------------
+                
                 // 3. KARAR ANI: EKLEME Mİ, GÜNCELLEME Mİ?
-                // ---------------------------------------------------------
+                
                 if (_gelenArabaID == 0)
                 {
                     // === YENİ KAYIT MODU ===

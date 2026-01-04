@@ -41,7 +41,6 @@ namespace BisarogluOtoGaleri
             btnGenelRapor = new BarButtonItem();
             ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             Müş = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             btnSatisYap = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -49,20 +48,26 @@ namespace BisarogluOtoGaleri
             ribbonPageRaporlar = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // ribbon
             // 
+            ribbon.ApplicationButtonImageOptions.Image = (Image)resources.GetObject("ribbon.ApplicationButtonImageOptions.Image");
             ribbon.BackColor = Color.FromArgb(0, 64, 0);
+            ribbon.EmptyAreaImageOptions.Image = (Image)resources.GetObject("ribbon.EmptyAreaImageOptions.Image");
             ribbon.ExpandCollapseItem.Id = 0;
             ribbon.Items.AddRange(new BarItem[] { ribbon.ExpandCollapseItem, btnAracListesi, btnYeniArac, btnMusteriListesi, btnYeniMusteri, barButtonItem5, btnSatisGecmisi, btnGenelRapor });
             ribbon.Location = new Point(0, 0);
             ribbon.MaxItemId = 8;
             ribbon.Name = "ribbon";
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPage1, ribbonPage2, btnSatisYap, ribbonPageRaporlar });
-            ribbon.Size = new Size(765, 158);
+            ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
+            ribbon.Size = new Size(805, 158);
             ribbon.StatusBar = ribbonStatusBar;
+            ribbon.Click += ribbon_Click;
             // 
             // btnAracListesi
             // 
@@ -131,21 +136,16 @@ namespace BisarogluOtoGaleri
             // 
             // ribbonPage1
             // 
-            ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1, ribbonPageGroup2 });
+            ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1 });
             ribbonPage1.Name = "ribbonPage1";
             ribbonPage1.Text = "Araç Yönetimi";
             // 
             // ribbonPageGroup1
             // 
             ribbonPageGroup1.ItemLinks.Add(btnAracListesi);
+            ribbonPageGroup1.ItemLinks.Add(btnYeniArac);
             ribbonPageGroup1.Name = "ribbonPageGroup1";
             ribbonPageGroup1.Text = "Araç İşlemleri";
-            // 
-            // ribbonPageGroup2
-            // 
-            ribbonPageGroup2.ItemLinks.Add(btnYeniArac);
-            ribbonPageGroup2.Name = "ribbonPageGroup2";
-            ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
             // ribbonPage2
             // 
@@ -187,18 +187,30 @@ namespace BisarogluOtoGaleri
             // 
             // ribbonStatusBar
             // 
-            ribbonStatusBar.Location = new Point(0, 508);
+            ribbonStatusBar.Location = new Point(0, 555);
             ribbonStatusBar.Name = "ribbonStatusBar";
             ribbonStatusBar.Ribbon = ribbon;
-            ribbonStatusBar.Size = new Size(765, 24);
+            ribbonStatusBar.Size = new Size(805, 24);
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Gemini_Generated_Image_u5vnm6u5vnm6u5vn1;
+            pictureBox1.Location = new Point(1, 164);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(804, 385);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // FrmAnaSayfa
             // 
+            AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
             Appearance.BackColor = Color.FromArgb(0, 64, 0);
             Appearance.Options.UseBackColor = true;
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(765, 532);
+            ClientSize = new Size(805, 579);
+            Controls.Add(pictureBox1);
             Controls.Add(ribbonStatusBar);
             Controls.Add(ribbon);
             IsMdiContainer = true;
@@ -208,6 +220,7 @@ namespace BisarogluOtoGaleri
             Text = "RibbonForm1";
             Load += FrmAnaSayfa_Load;
             ((System.ComponentModel.ISupportInitialize)ribbon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -233,6 +246,6 @@ namespace BisarogluOtoGaleri
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem btnSatisGecmisi;
         private DevExpress.XtraBars.BarButtonItem btnGenelRapor;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private PictureBox pictureBox1;
     }
 }

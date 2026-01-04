@@ -197,5 +197,62 @@ namespace BisarogluOtoGaleri.DataAccess
                 }
             }
         }
+        public List<Marka> MarkalariGetir()
+        {
+            List<Marka> liste = new List<Marka>();
+            using (SqlConnection baglanti = new SqlConnection(Baglanti.Adres))
+            {
+                if (baglanti.State == System.Data.ConnectionState.Closed) baglanti.Open();
+
+                string sorgu = "SELECT * FROM Tbl_Markalar";
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+                    using (SqlDataReader dr = komut.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            liste.Add(new Marka
+                            {
+                                MarkaID = Convert.ToInt32(dr["MarkaID"]),
+                                MarkaAdi = dr["MarkaAdi"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+            return liste;
+        }
+
+        // Seçilen markaya göre modelleri getir (Filtreleme)
+        public List<Model> ModelleriGetir(int markaID)
+        {
+            List<Model> liste = new List<Model>();
+            using (SqlConnection baglanti = new SqlConnection(Baglanti.Adres))
+            {
+                if (baglanti.State == System.Data.ConnectionState.Closed) baglanti.Open();
+
+                // KRİTİK NOKTA: WHERE şartı ile süzüyoruz!
+                string sorgu = "SELECT * FROM Tbl_Modeller WHERE MarkaID = @p1";
+
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+                    komut.Parameters.AddWithValue("@p1", markaID);
+
+                    using (SqlDataReader dr = komut.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            liste.Add(new Model
+                            {
+                                ModelID = Convert.ToInt32(dr["ModelID"]),
+                                MarkaID = Convert.ToInt32(dr["MarkaID"]),
+                                ModelAdi = dr["ModelAdi"].ToString()
+                            });
+                        }
+                    }
+                }
+            }
+            return liste;
+        }
     }
 }
