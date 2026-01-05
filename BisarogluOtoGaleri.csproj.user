@@ -8,6 +8,18 @@
     <Compile Update="FrmAracListesi.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FrmMusteriEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmMusteriListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmSatisGecmisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

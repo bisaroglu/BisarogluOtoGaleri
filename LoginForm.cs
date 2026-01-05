@@ -16,7 +16,7 @@ namespace BisarogluOtoGaleri
 
             if (cmbGirisTuru.Items.Count > 0)
             {
-                cmbGirisTuru.SelectedIndex = 1; // 0: Yönetici, 1: Satış Uzmanı
+                cmbGirisTuru.SelectedIndex = 0; // 0: Yönetici, 1: Satış Uzmanı
             }
         }
         private void GirisBasarili(string rol)
@@ -24,15 +24,15 @@ namespace BisarogluOtoGaleri
 
             this.Hide();
 
-            
+
             FrmAnaSayfa anaForm = new FrmAnaSayfa(rol);
 
-            
+
             anaForm.FormClosed += (s, args) => this.Close();
 
             anaForm.Show();
 
-           
+
         }
 
         private void HataVer(string mesaj)
@@ -55,7 +55,7 @@ namespace BisarogluOtoGaleri
             // --- YÖNETİCİ GİRİŞİ ---
             if (girisTuru == "Yönetici")
             {
-                if (kullaniciAdi == "admin" && sifre == "1234")
+                if (kullaniciAdi == "" && sifre == "")
                 {
                     GirisBasarili("Yönetici");
                 }
@@ -81,6 +81,11 @@ namespace BisarogluOtoGaleri
             {
                 HataVer("Lütfen bir giriş türü seçiniz.");
             }
+        }
+
+        private void cmbGirisTuru_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

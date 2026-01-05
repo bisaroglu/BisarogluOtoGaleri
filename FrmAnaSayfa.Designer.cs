@@ -39,6 +39,7 @@ namespace BisarogluOtoGaleri
             barButtonItem5 = new BarButtonItem();
             btnSatisGecmisi = new BarButtonItem();
             btnGenelRapor = new BarButtonItem();
+            barButtonItem1 = new BarButtonItem();
             ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -48,9 +49,7 @@ namespace BisarogluOtoGaleri
             ribbonPageRaporlar = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
-            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // ribbon
@@ -59,9 +58,9 @@ namespace BisarogluOtoGaleri
             ribbon.BackColor = Color.FromArgb(0, 64, 0);
             ribbon.EmptyAreaImageOptions.Image = (Image)resources.GetObject("ribbon.EmptyAreaImageOptions.Image");
             ribbon.ExpandCollapseItem.Id = 0;
-            ribbon.Items.AddRange(new BarItem[] { ribbon.ExpandCollapseItem, btnAracListesi, btnYeniArac, btnMusteriListesi, btnYeniMusteri, barButtonItem5, btnSatisGecmisi, btnGenelRapor });
+            ribbon.Items.AddRange(new BarItem[] { ribbon.ExpandCollapseItem, btnAracListesi, btnYeniArac, btnMusteriListesi, btnYeniMusteri, barButtonItem5, btnSatisGecmisi, btnGenelRapor, barButtonItem1 });
             ribbon.Location = new Point(0, 0);
-            ribbon.MaxItemId = 8;
+            ribbon.MaxItemId = 9;
             ribbon.Name = "ribbon";
             ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPage1, ribbonPage2, btnSatisYap, ribbonPageRaporlar });
             ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
@@ -97,6 +96,7 @@ namespace BisarogluOtoGaleri
             btnMusteriListesi.ImageOptions.LargeImage = (Image)resources.GetObject("btnMusteriListesi.ImageOptions.LargeImage");
             btnMusteriListesi.Name = "btnMusteriListesi";
             btnMusteriListesi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btnMusteriListesi.ItemClick += btnMusteriListesi_ItemClick;
             // 
             // btnYeniMusteri
             // 
@@ -106,6 +106,7 @@ namespace BisarogluOtoGaleri
             btnYeniMusteri.ImageOptions.LargeImage = (Image)resources.GetObject("btnYeniMusteri.ImageOptions.LargeImage");
             btnYeniMusteri.Name = "btnYeniMusteri";
             btnYeniMusteri.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btnYeniMusteri.ItemClick += btnYeniMusteri_ItemClick;
             // 
             // barButtonItem5
             // 
@@ -115,6 +116,7 @@ namespace BisarogluOtoGaleri
             barButtonItem5.ImageOptions.LargeImage = (Image)resources.GetObject("barButtonItem5.ImageOptions.LargeImage");
             barButtonItem5.Name = "barButtonItem5";
             barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            barButtonItem5.ItemClick += barButtonItem5_ItemClick;
             // 
             // btnSatisGecmisi
             // 
@@ -124,6 +126,7 @@ namespace BisarogluOtoGaleri
             btnSatisGecmisi.ImageOptions.LargeImage = (Image)resources.GetObject("btnSatisGecmisi.ImageOptions.LargeImage");
             btnSatisGecmisi.Name = "btnSatisGecmisi";
             btnSatisGecmisi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            btnSatisGecmisi.ItemClick += btnSatisGecmisi_ItemClick;
             // 
             // btnGenelRapor
             // 
@@ -133,6 +136,12 @@ namespace BisarogluOtoGaleri
             btnGenelRapor.ImageOptions.LargeImage = (Image)resources.GetObject("btnGenelRapor.ImageOptions.LargeImage");
             btnGenelRapor.Name = "btnGenelRapor";
             btnGenelRapor.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem1
+            // 
+            barButtonItem1.Caption = "barButtonItem1";
+            barButtonItem1.Id = 8;
+            barButtonItem1.Name = "barButtonItem1";
             // 
             // ribbonPage1
             // 
@@ -192,16 +201,6 @@ namespace BisarogluOtoGaleri
             ribbonStatusBar.Ribbon = ribbon;
             ribbonStatusBar.Size = new Size(805, 24);
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.Gemini_Generated_Image_u5vnm6u5vnm6u5vn1;
-            pictureBox1.Location = new Point(1, 164);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(804, 385);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
-            // 
             // FrmAnaSayfa
             // 
             AllowFormGlass = DevExpress.Utils.DefaultBoolean.True;
@@ -210,7 +209,6 @@ namespace BisarogluOtoGaleri
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(805, 579);
-            Controls.Add(pictureBox1);
             Controls.Add(ribbonStatusBar);
             Controls.Add(ribbon);
             IsMdiContainer = true;
@@ -220,10 +218,11 @@ namespace BisarogluOtoGaleri
             Text = "RibbonForm1";
             Load += FrmAnaSayfa_Load;
             ((System.ComponentModel.ISupportInitialize)ribbon).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
+
+        
 
         private void BtnYeniArac_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -246,6 +245,6 @@ namespace BisarogluOtoGaleri
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem btnSatisGecmisi;
         private DevExpress.XtraBars.BarButtonItem btnGenelRapor;
-        private PictureBox pictureBox1;
+        private BarButtonItem barButtonItem1;
     }
 }

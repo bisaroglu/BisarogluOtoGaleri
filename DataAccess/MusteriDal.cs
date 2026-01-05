@@ -11,38 +11,62 @@ namespace BisarogluOtoGaleri.DataAccess
         public List<Musteri> TumMusterileriGetir()
         {
             List<Musteri> liste = new List<Musteri>();
-
-            // 'using' bloğu, süslü parantez bittiği an bağlantıyı otomatik kapatır ve belleği temizler (Dispose).
             using (SqlConnection baglanti = new SqlConnection(Baglanti.Adres))
             {
-                if (baglanti.State == System.Data.ConnectionState.Closed)
-                {
-                    baglanti.Open();
-                }
+                if (baglanti.State == System.Data.ConnectionState.Closed) baglanti.Open();
 
-                using (SqlCommand komut = new SqlCommand("Select * From Tbl_Musteriler", baglanti))
+                // Sıralamayı isme göre yapalım
+                string sorgu = "SELECT * FROM Tbl_Musteriler ORDER BY Ad ASC";
+
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
                 {
                     using (SqlDataReader dr = komut.ExecuteReader())
                     {
                         while (dr.Read())
                         {
-                            Musteri m = new Musteri();
-                            // DBNull kontrolü yapmak profesyonelliktir (Boş veri gelirse patlamasın diye)
-                            m.MusteriID = Convert.ToInt32(dr["MusteriID"]);
-                            m.Ad = dr["Ad"] != DBNull.Value ? dr["Ad"].ToString() : "";
-                            m.Soyad = dr["Soyad"] != DBNull.Value ? dr["Soyad"].ToString() : "";
-                            m.TCKimlik = dr["TCKimlik"] != DBNull.Value ? dr["TCKimlik"].ToString() : "";
-                            m.Telefon = dr["Telefon"] != DBNull.Value ? dr["Telefon"].ToString() : "";
-                            m.Mail = dr["Mail"] != DBNull.Value ? dr["Mail"].ToString() : "";
-                            m.Adres = dr["Adres"] != DBNull.Value ? dr["Adres"].ToString() : "";
+                            liste.Add(new Musteri
+                            {
+                                MusteriID = Convert.ToInt32(dr["MusteriID"]),
+                                Ad = dr["Ad"].ToString(),
+                                Soyad = dr["Soyad"].ToString(),
 
-                            liste.Add(m);
+                                // KRİTİK NOKTA: Veritabanındaki sütun adını buraya yazdık
+                                TCKimlik = dr["TCKimlik"].ToString(),
+
+                                Telefon = dr["Telefon"].ToString(),
+                                Mail = dr["Mail"].ToString(),
+                                Adres = dr["Adres"].ToString()
+                            });
                         }
-                    } // Reader burada kapanır
-                } // Command burada yok edilir
-            } // Bağlantı burada OTOMATİK kapanır.
-
+                    }
+                }
+            }
             return liste;
+        }
+        public void MusteriEkle(Musteri m)
+        {
+            using (SqlConnection baglanti = new SqlConnection(Baglanti.Adres))
+            {
+                if (baglanti.State == System.Data.ConnectionState.Closed) baglanti.Open();
+
+                // Insert sorgusunda sütun adlarını senin tablona göre yazdım
+                string sorgu = "INSERT INTO Tbl_Musteriler (Ad, Soyad, TCKimlik, Telefon, Mail, Adres) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)";
+
+                using (SqlCommand komut = new SqlCommand(sorgu, baglanti))
+                {
+                    komut.Parameters.AddWithValue("@p1", m.Ad);
+                    komut.Parameters.AddWithValue("@p2", m.Soyad);
+
+                    // Entity'deki TCKimlik özelliğini gönderiyoruz
+                    komut.Parameters.AddWithValue("@p3", m.TCKimlik);
+
+                    komut.Parameters.AddWithValue("@p4", m.Telefon);
+                    komut.Parameters.AddWithValue("@p5", m.Mail);
+                    komut.Parameters.AddWithValue("@p6", m.Adres);
+
+                    komut.ExecuteNonQuery();
+                }
+            }
         }
     }
 }

@@ -145,26 +145,38 @@ namespace BisarogluOtoGaleri
         }
         void ResmiKutuyaYukle(DevExpress.XtraEditors.PictureEdit kutu, string dosyaAdi)
         {
-            if (kutu == null) return; // Güvenlik önlemi
+            // 1. Kutu veya Dosya Adı yoksa çık
+            if (kutu == null) return;
 
             if (string.IsNullOrEmpty(dosyaAdi))
             {
-                kutu.Image = null;
+                kutu.Image = null; // Gri/Boş ekran
                 return;
             }
 
             string tamYol = Path.Combine(Application.StartupPath, "AracResimleri", dosyaAdi);
 
+            // 2. Dosya fiziksel olarak var mı?
             if (File.Exists(tamYol))
             {
-                using (var stream = new FileStream(tamYol, FileMode.Open, FileAccess.Read))
+                try
                 {
-                    kutu.Image = Image.FromStream(stream);
+                    // KRİTİK NOKTA: Try-Catch bloğu
+                    // Eğer resim bozuksa, stream hatası verirse program çökmesin.
+                    using (var stream = new FileStream(tamYol, FileMode.Open, FileAccess.Read))
+                    {
+                        kutu.Image = Image.FromStream(stream);
+                    }
+                }
+                catch
+                {
+                    // Loglama yapılabilir: Console.WriteLine("Resim bozuk: " + dosyaAdi);
+                    kutu.Image = null; // Hata verirse resmi boş göster, program çalışmaya devam etsin.
                 }
             }
             else
             {
-                kutu.Image = null;
+                kutu.Image = null; // Dosya bulunamadı
             }
         }
     }

@@ -1,0 +1,19 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build outputs
+bin/
+obj/
+
+# .NET
+*.exe
+*.dll
+*.pdb
+
+# Logs & temp
+*.log
+*.tmp
+
+

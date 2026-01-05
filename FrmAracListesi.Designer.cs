@@ -30,21 +30,21 @@
         {
             groupControl1 = new DevExpress.XtraEditors.GroupControl();
             tableLayoutPanel1 = new TableLayoutPanel();
+            peK4 = new DevExpress.XtraEditors.PictureEdit();
+            peK3 = new DevExpress.XtraEditors.PictureEdit();
+            peK2 = new DevExpress.XtraEditors.PictureEdit();
+            peK1 = new DevExpress.XtraEditors.PictureEdit();
             gridControl1 = new DevExpress.XtraGrid.GridControl();
             gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            peK1 = new DevExpress.XtraEditors.PictureEdit();
-            peK2 = new DevExpress.XtraEditors.PictureEdit();
-            peK3 = new DevExpress.XtraEditors.PictureEdit();
-            peK4 = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)groupControl1).BeginInit();
             groupControl1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)peK4.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)peK3.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)peK2.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)peK1.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)peK1.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)peK2.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)peK3.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)peK4.Properties).BeginInit();
             SuspendLayout();
             // 
             // groupControl1
@@ -75,6 +75,50 @@
             tableLayoutPanel1.TabIndex = 0;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
+            // peK4
+            // 
+            peK4.BackgroundImageLayout = ImageLayout.Stretch;
+            peK4.Dock = DockStyle.Fill;
+            peK4.Location = new Point(193, 153);
+            peK4.Name = "peK4";
+            peK4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            peK4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            peK4.Size = new Size(185, 144);
+            peK4.TabIndex = 6;
+            // 
+            // peK3
+            // 
+            peK3.BackgroundImageLayout = ImageLayout.Stretch;
+            peK3.Dock = DockStyle.Fill;
+            peK3.Location = new Point(3, 153);
+            peK3.Name = "peK3";
+            peK3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            peK3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            peK3.Size = new Size(184, 144);
+            peK3.TabIndex = 5;
+            // 
+            // peK2
+            // 
+            peK2.BackgroundImageLayout = ImageLayout.Stretch;
+            peK2.Dock = DockStyle.Fill;
+            peK2.Location = new Point(193, 3);
+            peK2.Name = "peK2";
+            peK2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            peK2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            peK2.Size = new Size(185, 144);
+            peK2.TabIndex = 4;
+            // 
+            // peK1
+            // 
+            peK1.BackgroundImageLayout = ImageLayout.Stretch;
+            peK1.Dock = DockStyle.Fill;
+            peK1.Location = new Point(3, 3);
+            peK1.Name = "peK1";
+            peK1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            peK1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            peK1.Size = new Size(184, 144);
+            peK1.TabIndex = 0;
+            // 
             // gridControl1
             // 
             gridControl1.Location = new Point(0, 0);
@@ -88,43 +132,8 @@
             // 
             gridView1.GridControl = gridControl1;
             gridView1.Name = "gridView1";
+            gridView1.OptionsBehavior.Editable = false;
             gridView1.FocusedRowChanged += gridView1_FocusedRowChanged;
-            // 
-            // peK1
-            // 
-            peK1.Dock = DockStyle.Fill;
-            peK1.Location = new Point(3, 3);
-            peK1.Name = "peK1";
-            peK1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            peK1.Size = new Size(184, 144);
-            peK1.TabIndex = 0;
-            // 
-            // peK2
-            // 
-            peK2.Dock = DockStyle.Fill;
-            peK2.Location = new Point(193, 3);
-            peK2.Name = "peK2";
-            peK2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            peK2.Size = new Size(185, 144);
-            peK2.TabIndex = 4;
-            // 
-            // peK3
-            // 
-            peK3.Dock = DockStyle.Fill;
-            peK3.Location = new Point(3, 153);
-            peK3.Name = "peK3";
-            peK3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            peK3.Size = new Size(184, 144);
-            peK3.TabIndex = 5;
-            // 
-            // peK4
-            // 
-            peK4.Dock = DockStyle.Fill;
-            peK4.Location = new Point(193, 153);
-            peK4.Name = "peK4";
-            peK4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            peK4.Size = new Size(185, 144);
-            peK4.TabIndex = 6;
             // 
             // FrmAracListesi
             // 
@@ -139,12 +148,12 @@
             ((System.ComponentModel.ISupportInitialize)groupControl1).EndInit();
             groupControl1.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)peK4.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)peK3.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)peK2.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)peK1.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridControl1).EndInit();
             ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)peK1.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)peK2.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)peK3.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)peK4.Properties).EndInit();
             ResumeLayout(false);
         }
 

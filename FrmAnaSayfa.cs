@@ -12,7 +12,7 @@ namespace BisarogluOtoGaleri
     {
         private void btnAracListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            pictureBox1.Hide();
+
             foreach (Form form in this.MdiChildren)
             {
                 if (form is FrmAracListesi) // Eğer form zaten açıksa
@@ -82,6 +82,65 @@ namespace BisarogluOtoGaleri
 
         private void ribbon_Click(object sender, EventArgs e)
         {
+
+        }
+        FrmMusteriListesi _frmMusteriListesi;
+        private void btnMusteriListesi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (_frmMusteriListesi == null || _frmMusteriListesi.IsDisposed)
+            {
+                _frmMusteriListesi = new FrmMusteriListesi();
+                _frmMusteriListesi.MdiParent = this; // Ana formun çocuğu ol
+
+                // --- İŞTE EKSİK OLAN PARÇA ---
+                // Formu açılırken maksimize et ki boşluğa tam otursun, oynamasın.
+                _frmMusteriListesi.WindowState = FormWindowState.Maximized;
+
+                _frmMusteriListesi.Show();
+            }
+            else
+            {
+                _frmMusteriListesi.Activate();
+            }
+        }
+
+        private void btnYeniMusteri_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmMusteriEkle frm = new FrmMusteriEkle();
+            frm.ShowDialog(); // Kullanıcı işlemi bitirene kadar bekle
+
+            // İşlem bitti, pencere kapandı. Şimdi listeyi yenile.
+            if (_frmMusteriListesi != null && !_frmMusteriListesi.IsDisposed)
+            {
+                _frmMusteriListesi.Listele(); // Listeyi güncelle
+            }
+        }
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            FrmSatis frm = new FrmSatis();
+            frm.ShowDialog(); // Kullanıcı işlemi bitirene kadar bekle
+            
+        }
+
+
+        FrmSatisGecmisi _frmSatisGecmisi;
+        private void btnSatisGecmisi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            if (_frmSatisGecmisi == null || _frmSatisGecmisi.IsDisposed)
+            {
+                _frmSatisGecmisi = new FrmSatisGecmisi();
+                _frmSatisGecmisi.MdiParent = this; // Ana formun çocuğu ol
+
+                // --- İŞTE EKSİK OLAN PARÇA ---
+                // Formu açılırken maksimize et ki boşluğa tam otursun, oynamasın.
+                _frmSatisGecmisi.WindowState = FormWindowState.Maximized;
+
+                _frmSatisGecmisi.Show();
+            }
+            else
+            {
+                _frmSatisGecmisi.Activate();
+            }
 
         }
     }

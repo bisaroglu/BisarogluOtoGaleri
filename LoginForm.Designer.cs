@@ -78,6 +78,7 @@
             cmbGirisTuru.Name = "cmbGirisTuru";
             cmbGirisTuru.Size = new Size(121, 23);
             cmbGirisTuru.TabIndex = 2;
+            cmbGirisTuru.SelectedIndexChanged += cmbGirisTuru_SelectedIndexChanged;
             // 
             // label2
             // 

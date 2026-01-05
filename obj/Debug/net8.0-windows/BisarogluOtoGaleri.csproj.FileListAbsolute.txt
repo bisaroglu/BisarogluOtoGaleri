@@ -164,3 +164,7 @@ C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\Bisarogl
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.FrmAnaSayfa.resources
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.FrmAracListesi.resources
 C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.FrmAracDetay.resources
+C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.FrmMusteriListesi.resources
+C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.FrmMusteriEkle.resources
+C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.FrmSatis.resources
+C:\Users\dogus\source\repos\BisarogluOtoGaleri\obj\Debug\net8.0-windows\BisarogluOtoGaleri.FrmSatisGecmisi.resources
