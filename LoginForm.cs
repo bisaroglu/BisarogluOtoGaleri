@@ -5,6 +5,8 @@ namespace BisarogluOtoGaleri
 {
     public partial class LoginForm : Form
     {
+        private object cmbGirisTuru;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -14,10 +16,14 @@ namespace BisarogluOtoGaleri
         private void LoginForm_Load(object sender, EventArgs e)
         {
 
-            if (cmbGirisTuru.Items.Count > 0)
+            if (cmbGirisTürü.Properties.Items.Count > 0)
             {
-                cmbGirisTuru.SelectedIndex = 0; // 0: Yönetici, 1: Satış Uzmanı
+                cmbGirisTürü.SelectedIndex = 0; // Varsayılan olarak ilkini seç (Yönetici)
             }
+
+            // EKSTRA GÜVENLİK (Tech Lead Dokunuşu):
+            // Kullanıcının klavyeden "Müdür", "Patron" gibi kafasına göre şeyler yazmasını engeller.
+            cmbGirisTürü.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
         }
         private void GirisBasarili(string rol)
         {
@@ -50,36 +56,46 @@ namespace BisarogluOtoGaleri
         {
             string kullaniciAdi = txtKullaniciAdi.Text.Trim();
             string sifre = txtSifre.Text.Trim();
-            string girisTuru = cmbGirisTuru.Text;
+            string girisTuru = cmbGirisTürü.Text; // DevExpress ComboBoxEdit'te de Text özelliği geçerlidir.
 
-            // --- YÖNETİCİ GİRİŞİ ---
+            // 2. Erken Validasyonlar (Boş Geçilemez Kontrolleri)
+            if (string.IsNullOrEmpty(girisTuru))
+            {
+                HataVer("Lütfen giriş türünü seçiniz!");
+                return; // İşlemi durdur
+            }
+
+            if (string.IsNullOrEmpty(kullaniciAdi) || string.IsNullOrEmpty(sifre))
+            {
+                HataVer("Kullanıcı adı ve şifre boş bırakılamaz.");
+                return;
+            }
+
+            // 3. Giriş Mantığı
             if (girisTuru == "Yönetici")
             {
-                if (kullaniciAdi == "" && sifre == "")
+                // Sunum için hardcoded şifre: admin / 1234
+                // NOT: Boş şifre ile giriş sunumda risklidir, basit de olsa bir şifre koyduk.
+                if (kullaniciAdi == "admin" && sifre == "1234")
                 {
                     GirisBasarili("Yönetici");
                 }
                 else
                 {
-                    HataVer("Hatalı Yönetici bilgileri! Lütfen kontrol ediniz.");
+                    HataVer("Hatalı Yönetici bilgileri! (Demo: admin/1234)");
                 }
             }
-            // --- SATIŞ UZMANI GİRİŞİ ---
             else if (girisTuru == "Satış Uzmanı")
             {
-                GirisBasarili("Satış Uzmanı");
+                // DİKKAT: Eski kodunda burada şifre sormadan giriş yapıyordu. DÜZELTİLDİ.
                 if (kullaniciAdi == "satis" && sifre == "1234")
                 {
                     GirisBasarili("Satış Uzmanı");
                 }
                 else
                 {
-                    //HataVer("Hatalı Satış Personeli bilgileri!");
+                    HataVer("Hatalı Satış Personeli bilgileri! (Demo: satis/1234)");
                 }
-            }
-            else
-            {
-                HataVer("Lütfen bir giriş türü seçiniz.");
             }
         }
 
