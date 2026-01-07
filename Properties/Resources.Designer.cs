@@ -103,6 +103,26 @@ namespace BisarogluOtoGaleri.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_nead5wnead5wnead {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_nead5wnead5wnead", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_nead5wnead5wnead1 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_nead5wnead5wnead1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Gemini_Generated_Image_tzo7jetzo7jetzo7 {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_tzo7jetzo7jetzo7", resourceCulture);

@@ -88,7 +88,6 @@ namespace BisarogluOtoGaleri
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(10, 40, 20);
-            BackgroundImage = Properties.Resources.Gemini_Generated_Image_x0wak8x0wak8x0wa;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(400, 200);
             Controls.Add(btnTamam);

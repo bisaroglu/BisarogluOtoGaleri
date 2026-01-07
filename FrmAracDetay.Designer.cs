@@ -65,6 +65,7 @@
             txtKilometre.BackColor = Color.DarkKhaki;
             txtKilometre.BorderStyle = BorderStyle.FixedSingle;
             txtKilometre.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            txtKilometre.ForeColor = Color.Black;
             txtKilometre.Location = new Point(213, 309);
             txtKilometre.Name = "txtKilometre";
             txtKilometre.Size = new Size(100, 29);

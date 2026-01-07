@@ -122,14 +122,37 @@ namespace BisarogluOtoGaleri
 
         private void btnYeniMusteri_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmMusteriEkle frm = new FrmMusteriEkle();
-            frm.ShowDialog(); // Kullanıcı işlemi bitirene kadar bekle
-
-            // İşlem bitti, pencere kapandı. Şimdi listeyi yenile.
-            if (_frmMusteriListesi != null && !_frmMusteriListesi.IsDisposed)
+            foreach (Form acikForm in Application.OpenForms)
             {
-                _frmMusteriListesi.Listele(); // Listeyi güncelle
+                // Eğer açmak istediğimiz form zaten açıksa...
+                if (acikForm is FrmMusteriEkle)
+                {
+                    acikForm.Activate(); // Onu öne getir.
+                    return; // Ve metottan çık, yenisini oluşturma.
+                }
             }
+
+            // Adım 2: Eğer açık değilse, yeni bir örnek oluştur.
+            FrmMusteriEkle frm = new FrmMusteriEkle();
+
+            // Adım 3: KRİTİK NOKTA! Formun babasının bu ana form olduğunu belirt.
+            // Bunu dediğin an DocumentManager formu kapar ve içine sekme olarak koyar.
+            frm.MdiParent = this;
+
+            // Not: DocumentManager kullanıyorsan WindowState.Maximized yapmana gerek yoktur,
+            // o zaten otomatik olarak alanı doldurur.
+
+            // Adım 4: Formu göster (ShowDialog DEĞİL!)
+            frm.Show();
+
+            //FrmMusteriEkle frm = new FrmMusteriEkle();
+            //frm.ShowDialog(); // Kullanıcı işlemi bitirene kadar bekle
+
+            //// İşlem bitti, pencere kapandı. Şimdi listeyi yenile.
+            //if (_frmMusteriListesi != null && !_frmMusteriListesi.IsDisposed)
+            //{
+            //    _frmMusteriListesi.Listele(); // Listeyi güncelle
+            //}
         }
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
         {

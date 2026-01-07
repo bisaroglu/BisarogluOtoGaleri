@@ -11,8 +11,7 @@ namespace BisarogluOtoGaleri.Entity
         public int Kilometre { get; set; }    // Km arttıkça fiyat düşer
         public string YakitTuru { get; set; } // Benzin, Dizel, Hibrit
         public string VitesTipi { get; set; } // Manuel, Otomatik
-        public int DegisenParcaSayisi { get; set; } // AI için negatif katsayı
-        public int BoyaliParcaSayisi { get; set; }  // AI için negatif katsayı
+        
         public bool AgirHasarKayitliMi { get; set; } // Fiyatı direkt %30-%50 etkiler
         public decimal Fiyat { get; set; }    // Gerçek fiyat (AI eğitimi için lazım olacak)
         public string Durum { get; set; }

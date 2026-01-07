@@ -13,6 +13,12 @@ namespace BisarogluOtoGaleri
         public FrmSatisGecmisi()
         {
             InitializeComponent();
+            Listele();
+
+            // 2. KRİTİK KOMUT: Sütunları gelen veriye göre OTOMATİK oluştur!
+            // Bu komut, Grid'in hafızasını temizler ve yeni verilere (AracBilgi, MusteriAdSoyad vs.)
+            // uygun sütunları en baştan yaratır.
+            gridView1.PopulateColumns();
         }
 
         private void FrmSatisGecmisi_Load(object sender, EventArgs e)
@@ -65,6 +71,11 @@ namespace BisarogluOtoGaleri
             // 3. GENEL AYARLAR
             gridView1.OptionsBehavior.Editable = false; // Düzenlemeyi kapat
             gridView1.BestFitColumns(); // Sütunları sığdır
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

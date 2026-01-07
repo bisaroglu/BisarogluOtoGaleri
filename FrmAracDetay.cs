@@ -17,18 +17,15 @@ namespace BisarogluOtoGaleri
     public partial class FrmAracDetay : Form
     {
         ArabaManager _manager;
-        List<string> _secilenDosyaYollari = new List<string>();
-
-        List<string> _dbGelenResimler = new List<string>();
-        int _aktifResimIndex = 0;
+        List<string> _secilenDosyaYollari = new List<string>(); // Yeni seçilen resimlerin yolları
+        List<string> _dbGelenResimler = new List<string>();     // Veritabanından gelen mevcut resim adları
+        int _aktifResimIndex = 0; // Galeri gezinme indeksi
         int _gelenArabaID = 0;
 
         public FrmAracDetay(int id = 0)
         {
             InitializeComponent();
-            TextBoxHelper.SetPlaceholder(txtYil, "Plaka Giriniz...");
-            TextBoxHelper.SetPlaceholder(txtKilometre, "Plaka Giriniz...");
-            TextBoxHelper.SetPlaceholder(txtFiyat, "Plaka Giriniz...");
+            
             
             // Gelen ID'yi içeri alıyoruz
             _gelenArabaID = id;
@@ -57,6 +54,7 @@ namespace BisarogluOtoGaleri
                 btnGeri.Visible = false;
                 btnIleri.Visible = false;
                 lblResimSayac.Visible = false;
+                this.Text = "Yeni Araç Girişi";
             }
         }
         void MarkalariYukle()
@@ -65,12 +63,13 @@ namespace BisarogluOtoGaleri
 
             // LookUpEdit Ayarları (Bunları Kodla Yapıyoruz ki sağlam olsun)
             lkeMarka.Properties.DataSource = markalar;
-            lkeMarka.Properties.DisplayMember = "MarkaAdi"; // Ekranda görünecek (String)
-            lkeMarka.Properties.ValueMember = "MarkaID";    // Arkada tutulacak (Int)
+            lkeMarka.Properties.DisplayMember = "MarkaAdi"; // Ekranda görünen
+            lkeMarka.Properties.ValueMember = "MarkaID";    // Arkada tutulan ID
 
             lkeMarka.Properties.NullText = "Marka Seçiniz...";
-            lkeMarka.Properties.PopulateColumns(); // Sütunları oluştur
-            lkeMarka.Properties.Columns["MarkaID"].Visible = false;
+            lkeMarka.Properties.PopulateColumns();
+            if (lkeMarka.Properties.Columns["MarkaID"] != null)
+                lkeMarka.Properties.Columns["MarkaID"].Visible = false;
         }
         private void lkeMarka_EditValueChanged(object sender, EventArgs e)
         {
@@ -87,13 +86,12 @@ namespace BisarogluOtoGaleri
                 lkeModel.Properties.ValueMember = "ModelID";    // Arkada '102' tutsun
 
                 // Gereksiz sütunları gizle (Opsiyonel ama şık durur)
+                lkeModel.Properties.NullText = "Model Seçiniz";
                 lkeModel.Properties.PopulateColumns();
                 if (lkeModel.Properties.Columns["ModelID"] != null)
                     lkeModel.Properties.Columns["ModelID"].Visible = false;
                 if (lkeModel.Properties.Columns["MarkaID"] != null)
                     lkeModel.Properties.Columns["MarkaID"].Visible = false;
-
-                lkeModel.Properties.NullText = "Model Seçiniz";
             }
         }
 
@@ -125,6 +123,11 @@ namespace BisarogluOtoGaleri
                 pbxAracResim.ImageLocation = tamYol;
                 lblResimSayac.Text = $"{_aktifResimIndex + 1} / {_dbGelenResimler.Count}";
             }
+            else
+            {
+                // Resim veritabanında var ama klasörde yoksa placeholder gösterilebilir.
+                pbxAracResim.Image = null;
+            }
         }
         private void btnIleri_Click(object sender, EventArgs e)
         {
@@ -140,33 +143,6 @@ namespace BisarogluOtoGaleri
             {
                 _aktifResimIndex--;
                 DbResminiGoster();
-            }
-        }
-        void BilgileriGetir(int id)
-        {
-            // 1. Veritabanından aracı çek
-            Araba gelenAraba = _manager.ArabaGetir(id);
-
-            if (gelenAraba != null)
-            {
-                lkeModel.EditValue = gelenAraba.ModelID;
-                lkeMarka.EditValue = gelenAraba.MarkaID;
-                txtYil.Text = gelenAraba.Yil.ToString();
-                txtKilometre.Text = gelenAraba.Kilometre.ToString();
-                txtFiyat.Text = gelenAraba.Fiyat.ToString();
-
-                // Durum (Vites/Yakıt) veya Açıklama alanı varsa:
-                // txtDurum.Text = gelenAraba.Durum; 
-
-                chkAgirHasar.Checked = gelenAraba.AgirHasarKayitliMi;
-
-                // Formun başlığına da havalı bir şey yazalım
-                this.Text = $"Araç Düzenle - Kayıt No: {id}";
-            }
-            else
-            {
-                MessageBox.Show("Araç bilgileri okunamadı!", "Hata");
-                this.Close();
             }
         }
         private void btnResimSec_Click(object sender, EventArgs e)
@@ -192,9 +168,47 @@ namespace BisarogluOtoGaleri
                 }
             }
         }
+        void BilgileriGetir(int id)
+        {
+            // 1. Veritabanından aracı çek
+            Araba gelenAraba = _manager.ArabaGetir(id);
+
+            if (gelenAraba != null)
+            {
+                // LookUpEdit'lere ID atayınca otomatik olarak metni gösterirler
+                lkeMarka.EditValue = gelenAraba.MarkaID;
+                // Marka seçilince Model event'i tetiklenir, ardından modeli seçeriz.
+                Application.DoEvents(); // Eventin işlenmesini bekle
+                lkeModel.EditValue = gelenAraba.ModelID;
+
+                txtYil.Text = gelenAraba.Yil.ToString();
+                txtKilometre.Text = gelenAraba.Kilometre.ToString();
+                txtFiyat.Text = gelenAraba.Fiyat.ToString();
+                chkAgirHasar.Checked = gelenAraba.AgirHasarKayitliMi;
+
+                // --- EKLENEN KISIM: Yakıt ve Vites Bilgilerini Getir ---
+                // (UI'da bu isimde ComboBox'lar olduğunu varsayıyorum)
+                cmbYakit.Text = gelenAraba.YakitTuru;
+                cmbVites.Text = gelenAraba.VitesTipi;
+                // -----------------------------------------------------
+
+                this.Text = $"Araç Düzenle - Kayıt No: {id}";
+            }
+            else
+            {
+                BisarogluMsg.Goster("Araç bilgileri veritabanından okunamadı!", "Hata");
+                this.Close();
+            }
+        }
+        
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
+            if (lkeMarka.EditValue == null || lkeModel.EditValue == null || string.IsNullOrEmpty(txtFiyat.Text))
+            {
+                BisarogluMsg.Goster("Lütfen Marka, Model ve Fiyat bilgilerini eksiksiz giriniz.", "Uyarı");
+                return;
+            }
             try
             {
                 // 1. Nesneyi Oluştur ve Ortak Verileri Doldur
@@ -203,19 +217,22 @@ namespace BisarogluOtoGaleri
                 // --- TEXTBOX VERİLERİNİ AL (Kendi formuna göre düzenle) ---
                 arabaNesnesi.MarkaID = Convert.ToInt32(lkeMarka.EditValue);
                 arabaNesnesi.ModelID = Convert.ToInt32(lkeModel.EditValue);
-
+                arabaNesnesi.Fiyat = Convert.ToDecimal(txtFiyat.Text);
+                arabaNesnesi.Yil = Convert.ToInt32(txtYil.Text);
+                arabaNesnesi.Kilometre = Convert.ToInt32(txtKilometre.Text);
+                arabaNesnesi.YakitTuru = cmbYakit.Text;
+                arabaNesnesi.VitesTipi = cmbVites.Text;
                 arabaNesnesi.AgirHasarKayitliMi = chkAgirHasar.Checked;
 
 
                 // 2. RESİM MANTIĞI (Hem Ekleme Hem Güncelleme İçin)
 
                 bool yeniResimSecildiMi = _secilenDosyaYollari.Count > 0;
-                string kapakResimAdi = "";
 
                 if (yeniResimSecildiMi)
                 {
-                    // Yeni resim seçildiyse, ilki kapak resmi olur
-                    kapakResimAdi = _manager.ResimDosyasiniYonet(_secilenDosyaYollari[0]);
+                    // Yeni resim seçildiyse, ilki kapak resmi olur, klasöre kopyalanır.
+                    string kapakResimAdi = _manager.ResimDosyasiniYonet(_secilenDosyaYollari[0]);
                     arabaNesnesi.ResimYolu = kapakResimAdi;
                 }
                 else
@@ -223,7 +240,7 @@ namespace BisarogluOtoGaleri
                     // Yeni resim seçilmediyse:
                     if (_gelenArabaID > 0)
                     {
-                        arabaNesnesi.ResimYolu = ""; // Veya mevcut path
+                        arabaNesnesi.ResimYolu = null; // Veya mevcut path
                     }
                 }
 
@@ -239,7 +256,7 @@ namespace BisarogluOtoGaleri
                     // Ekstra resimleri kaydet
                     EkstraResimleriKaydet(yeniID);
 
-                    MessageBox.Show("Yeni araç başarıyla eklendi!", "Bilgi");
+                    BisarogluMsg.Goster("Yeni araç başarıyla eklendi!", "Bilgi");
                 }
                 else
                 {
@@ -259,14 +276,18 @@ namespace BisarogluOtoGaleri
                         EkstraResimleriKaydet(_gelenArabaID);
                     }
 
-                    MessageBox.Show("Araç bilgileri güncellendi!", "Bilgi");
+                    BisarogluMsg.Goster("Araç bilgileri güncellendi!", "Bilgi");
                 }
 
                 this.Close();
             }
+            catch (FormatException)
+            {
+                BisarogluMsg.Goster("Fiyat, Yıl veya Kilometre alanlarına geçersiz bir değer girdiniz. Lütfen sadece sayı kullanın.", "Hata");
+            }
             catch (Exception ex)
             {
-                MessageBox.Show("Hata: " + ex.Message);
+                BisarogluMsg.Goster("Hata: " + ex.Message);
             }
         }
         void EkstraResimleriKaydet(int arabaID)

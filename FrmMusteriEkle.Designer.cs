@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
             txtAd = new TextBox();
             txtSoyad = new TextBox();
             txtMail = new TextBox();
@@ -44,109 +38,73 @@
             ((System.ComponentModel.ISupportInitialize)txtAdres.Properties).BeginInit();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(173, 74);
-            label1.Name = "label1";
-            label1.Size = new Size(28, 15);
-            label1.TabIndex = 0;
-            label1.Text = "Adı:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(173, 107);
-            label2.Name = "label2";
-            label2.Size = new Size(45, 15);
-            label2.TabIndex = 1;
-            label2.Text = "Soyadı:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(173, 150);
-            label3.Name = "label3";
-            label3.Size = new Size(60, 15);
-            label3.TabIndex = 2;
-            label3.Text = "TC Kimlik:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(173, 192);
-            label4.Name = "label4";
-            label4.Size = new Size(49, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Telefon:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(173, 226);
-            label5.Name = "label5";
-            label5.Size = new Size(33, 15);
-            label5.TabIndex = 4;
-            label5.Text = "Mail:";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(173, 259);
-            label6.Name = "label6";
-            label6.Size = new Size(40, 15);
-            label6.TabIndex = 5;
-            label6.Text = "Adres:";
-            // 
             // txtAd
             // 
-            txtAd.Location = new Point(245, 71);
+            txtAd.BackColor = Color.FromArgb(172, 133, 76);
+            txtAd.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            txtAd.Location = new Point(319, 207);
             txtAd.Name = "txtAd";
-            txtAd.Size = new Size(100, 23);
+            txtAd.Size = new Size(288, 29);
             txtAd.TabIndex = 6;
             // 
             // txtSoyad
             // 
-            txtSoyad.Location = new Point(245, 107);
+            txtSoyad.BackColor = Color.FromArgb(172, 133, 76);
+            txtSoyad.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            txtSoyad.Location = new Point(627, 208);
             txtSoyad.Name = "txtSoyad";
-            txtSoyad.Size = new Size(100, 23);
+            txtSoyad.Size = new Size(297, 29);
             txtSoyad.TabIndex = 7;
             // 
             // txtMail
             // 
-            txtMail.Location = new Point(236, 223);
+            txtMail.BackColor = Color.FromArgb(172, 133, 76);
+            txtMail.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            txtMail.Location = new Point(787, 275);
             txtMail.Name = "txtMail";
-            txtMail.Size = new Size(100, 23);
+            txtMail.Size = new Size(296, 29);
             txtMail.TabIndex = 8;
             // 
             // mskTC
             // 
-            mskTC.Location = new Point(245, 147);
+            mskTC.BackColor = Color.FromArgb(172, 133, 76);
+            mskTC.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            mskTC.Location = new Point(158, 274);
             mskTC.Name = "mskTC";
-            mskTC.Size = new Size(100, 23);
+            mskTC.Size = new Size(292, 29);
             mskTC.TabIndex = 9;
             // 
             // mskTelefon
             // 
-            mskTelefon.Location = new Point(245, 189);
+            mskTelefon.BackColor = Color.FromArgb(172, 133, 76);
+            mskTelefon.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            mskTelefon.Location = new Point(469, 275);
             mskTelefon.Name = "mskTelefon";
-            mskTelefon.Size = new Size(100, 23);
+            mskTelefon.Size = new Size(295, 29);
             mskTelefon.TabIndex = 10;
             // 
             // txtAdres
             // 
-            txtAdres.Location = new Point(245, 258);
+            txtAdres.Location = new Point(153, 356);
             txtAdres.Name = "txtAdres";
-            txtAdres.Size = new Size(100, 96);
+            txtAdres.Properties.Appearance.BackColor = Color.FromArgb(172, 133, 76);
+            txtAdres.Properties.Appearance.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            txtAdres.Properties.Appearance.ForeColor = Color.Black;
+            txtAdres.Properties.Appearance.Options.UseBackColor = true;
+            txtAdres.Properties.Appearance.Options.UseFont = true;
+            txtAdres.Properties.Appearance.Options.UseForeColor = true;
+            txtAdres.Size = new Size(938, 85);
             txtAdres.TabIndex = 12;
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(459, 341);
+            btnKaydet.BackgroundImage = Properties.Resources.Gemini_Generated_Image_nead5wnead5wnead1;
+            btnKaydet.BackgroundImageLayout = ImageLayout.Stretch;
+            btnKaydet.FlatStyle = FlatStyle.Flat;
+            btnKaydet.Location = new Point(399, 451);
             btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(75, 23);
+            btnKaydet.Size = new Size(441, 50);
             btnKaydet.TabIndex = 13;
-            btnKaydet.Text = "KAYDET";
             btnKaydet.UseVisualStyleBackColor = true;
             btnKaydet.Click += btnKaydet_Click_1;
             // 
@@ -154,7 +112,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = Properties.Resources.Gemini_Generated_Image_nead5wnead5wnead;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1230, 545);
             Controls.Add(btnKaydet);
             Controls.Add(txtAdres);
             Controls.Add(mskTelefon);
@@ -162,13 +122,7 @@
             Controls.Add(txtMail);
             Controls.Add(txtSoyad);
             Controls.Add(txtAd);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmMusteriEkle";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmMusteriEkle";
@@ -179,13 +133,6 @@
         }
 
         #endregion
-
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
         private TextBox txtAd;
         private TextBox txtSoyad;
         private TextBox txtMail;

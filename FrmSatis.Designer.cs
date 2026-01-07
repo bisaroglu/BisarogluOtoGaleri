@@ -131,6 +131,7 @@
             // 
             // txtVites
             // 
+            txtVites.EditValue = "s";
             txtVites.Location = new Point(147, 201);
             txtVites.Name = "txtVites";
             txtVites.Properties.ReadOnly = true;
