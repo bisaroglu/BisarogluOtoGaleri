@@ -154,11 +154,29 @@ namespace BisarogluOtoGaleri
             //    _frmMusteriListesi.Listele(); // Listeyi güncelle
             //}
         }
+        FrmSatis _frmSatis;
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
         {
-            FrmSatis frm = new FrmSatis();
-            frm.ShowDialog(); // Kullanıcı işlemi bitirene kadar bekle
-            
+
+            foreach (Form form in this.MdiChildren)
+            {
+                if (form is FrmSatis)
+                {
+                    // Eğer zaten açıksa, o sekmeyi aktif et (öne getir)
+                    form.Activate();
+                    return; // Metottan çık, yenisini oluşturma.
+                }
+            }
+
+            // 2. YOKSA YENİ OLUŞTUR:
+            FrmSatis yeniSatis = new FrmSatis();
+
+            // Bu satır çok önemli! Bunu yazdığın an DocumentManager formu yakalar ve sekme yapar.
+            yeniSatis.MdiParent = this;
+
+            // WindowState ayarına GEREK YOKTUR. DocumentManager onu otomatik doldurur.
+            yeniSatis.Show();
+
         }
 
 

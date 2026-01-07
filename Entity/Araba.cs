@@ -16,6 +16,8 @@ namespace BisarogluOtoGaleri.Entity
         public decimal Fiyat { get; set; }    // Gerçek fiyat (AI eğitimi için lazım olacak)
         public string Durum { get; set; }
         public string ResimYolu { get; set; }
+        public string MarkaAdi { get; set; }
+        public string ModelAdi { get; set; }
 
         // İlişkisel veriler için (Ekranda göstermek adına)
         // Veritabanı mapping'inde ignore edilebilir ama UI için lazımdır.
