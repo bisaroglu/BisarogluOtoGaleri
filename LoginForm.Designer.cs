@@ -34,9 +34,9 @@
             txtKullaniciAdi = new TextBox();
             txtSifre = new TextBox();
             btnGiris = new Button();
-            cmbGirisTürü = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            cmbGiris = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)defaultBarAndDockingController1.Controller).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)cmbGirisTürü.Properties).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)cmbGiris.Properties).BeginInit();
             SuspendLayout();
             // 
             // defaultBarAndDockingController1
@@ -44,22 +44,27 @@
             // 
             // txtKullaniciAdi
             // 
-            txtKullaniciAdi.BackColor = Color.Gold;
+            txtKullaniciAdi.BackColor = Color.FromArgb(10, 40, 20);
             txtKullaniciAdi.BorderStyle = BorderStyle.FixedSingle;
-            txtKullaniciAdi.Location = new Point(442, 325);
+            txtKullaniciAdi.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            txtKullaniciAdi.ForeColor = Color.Gold;
+            txtKullaniciAdi.Location = new Point(473, 350);
             txtKullaniciAdi.Name = "txtKullaniciAdi";
-            txtKullaniciAdi.Size = new Size(158, 23);
+            txtKullaniciAdi.Size = new Size(338, 29);
             txtKullaniciAdi.TabIndex = 5;
             // 
             // txtSifre
             // 
-            txtSifre.BackColor = Color.Gold;
+            txtSifre.BackColor = Color.FromArgb(10, 40, 20);
             txtSifre.BorderStyle = BorderStyle.FixedSingle;
-            txtSifre.Location = new Point(442, 415);
+            txtSifre.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            txtSifre.ForeColor = Color.Gold;
+            txtSifre.Location = new Point(473, 447);
             txtSifre.Name = "txtSifre";
             txtSifre.PasswordChar = '*';
-            txtSifre.Size = new Size(158, 23);
+            txtSifre.Size = new Size(338, 29);
             txtSifre.TabIndex = 6;
+            txtSifre.TextChanged += txtSifre_TextChanged;
             // 
             // btnGiris
             // 
@@ -67,29 +72,29 @@
             btnGiris.BackgroundImage = Properties.Resources.Gemini_Generated_Image_zhw7o8zhw7o8zhw7;
             btnGiris.BackgroundImageLayout = ImageLayout.Stretch;
             btnGiris.FlatStyle = FlatStyle.Flat;
-            btnGiris.Location = new Point(386, 476);
+            btnGiris.Location = new Point(414, 515);
             btnGiris.Name = "btnGiris";
-            btnGiris.Size = new Size(401, 53);
+            btnGiris.Size = new Size(430, 53);
             btnGiris.TabIndex = 7;
             btnGiris.UseVisualStyleBackColor = false;
             btnGiris.Click += btnGiris_Click_1;
             // 
-            // cmbGirisTürü
+            // cmbGiris
             // 
-            cmbGirisTürü.EditValue = "Yönetici";
-            cmbGirisTürü.Location = new Point(385, 235);
-            cmbGirisTürü.Name = "cmbGirisTürü";
-            cmbGirisTürü.Properties.Appearance.BackColor = Color.FromArgb(25, 50, 35);
-            cmbGirisTürü.Properties.Appearance.Font = new Font("Verdana", 17.25F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            cmbGirisTürü.Properties.Appearance.ForeColor = Color.Gold;
-            cmbGirisTürü.Properties.Appearance.Options.UseBackColor = true;
-            cmbGirisTürü.Properties.Appearance.Options.UseFont = true;
-            cmbGirisTürü.Properties.Appearance.Options.UseForeColor = true;
-            cmbGirisTürü.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            cmbGirisTürü.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.CheckedListBoxItem[] { new DevExpress.XtraEditors.Controls.CheckedListBoxItem("Yönetici", "", CheckState.Checked, "Yönetici"), new DevExpress.XtraEditors.Controls.CheckedListBoxItem("Satış Uzmanı", "", "Satış Uzmanı") });
-            cmbGirisTürü.Properties.SelectAllItemVisible = false;
-            cmbGirisTürü.Size = new Size(401, 34);
-            cmbGirisTürü.TabIndex = 8;
+            cmbGiris.Location = new Point(414, 257);
+            cmbGiris.Name = "cmbGiris";
+            cmbGiris.Properties.Appearance.BackColor = Color.FromArgb(10, 40, 20);
+            cmbGiris.Properties.Appearance.Font = new Font("Perpetua Titling MT", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbGiris.Properties.Appearance.ForeColor = Color.Gold;
+            cmbGiris.Properties.Appearance.Options.UseBackColor = true;
+            cmbGiris.Properties.Appearance.Options.UseFont = true;
+            cmbGiris.Properties.Appearance.Options.UseForeColor = true;
+            cmbGiris.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
+            cmbGiris.Properties.Items.AddRange(new object[] { "Yönetici", "Satış Uzmanı" });
+            cmbGiris.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            cmbGiris.Size = new Size(397, 32);
+            cmbGiris.TabIndex = 8;
+            cmbGiris.SelectedIndexChanged += cmbGiris_SelectedIndexChanged;
             // 
             // LoginForm
             // 
@@ -99,13 +104,14 @@
             BackColor = Color.FromArgb(0, 64, 0);
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1168, 673);
-            Controls.Add(cmbGirisTürü);
+            ClientSize = new Size(1252, 729);
+            Controls.Add(cmbGiris);
             Controls.Add(btnGiris);
             Controls.Add(txtSifre);
             Controls.Add(txtKullaniciAdi);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -113,7 +119,7 @@
             Text = "Kullanıcı Girişi";
             Load += LoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)defaultBarAndDockingController1.Controller).EndInit();
-            ((System.ComponentModel.ISupportInitialize)cmbGirisTürü.Properties).EndInit();
+            ((System.ComponentModel.ISupportInitialize)cmbGiris.Properties).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -124,6 +130,6 @@
         private TextBox txtKullaniciAdi;
         private TextBox txtSifre;
         private Button btnGiris;
-        private DevExpress.XtraEditors.CheckedComboBoxEdit cmbGirisTürü;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbGiris;
     }
 }

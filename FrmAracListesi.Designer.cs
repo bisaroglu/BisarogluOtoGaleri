@@ -50,11 +50,12 @@
             // groupControl1
             // 
             groupControl1.Controls.Add(tableLayoutPanel1);
-            groupControl1.Location = new Point(651, 85);
+            groupControl1.Location = new Point(636, 0);
             groupControl1.Name = "groupControl1";
-            groupControl1.Size = new Size(385, 325);
+            groupControl1.Size = new Size(613, 584);
             groupControl1.TabIndex = 0;
             groupControl1.Text = "Araç Resimleri";
+            groupControl1.Paint += groupControl1_Paint;
             // 
             // tableLayoutPanel1
             // 
@@ -71,7 +72,7 @@
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(381, 300);
+            tableLayoutPanel1.Size = new Size(609, 559);
             tableLayoutPanel1.TabIndex = 0;
             tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
@@ -79,33 +80,33 @@
             // 
             peK4.BackgroundImageLayout = ImageLayout.Stretch;
             peK4.Dock = DockStyle.Fill;
-            peK4.Location = new Point(193, 153);
+            peK4.Location = new Point(307, 282);
             peK4.Name = "peK4";
             peK4.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             peK4.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            peK4.Size = new Size(185, 144);
+            peK4.Size = new Size(299, 274);
             peK4.TabIndex = 6;
             // 
             // peK3
             // 
             peK3.BackgroundImageLayout = ImageLayout.Stretch;
             peK3.Dock = DockStyle.Fill;
-            peK3.Location = new Point(3, 153);
+            peK3.Location = new Point(3, 282);
             peK3.Name = "peK3";
             peK3.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             peK3.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            peK3.Size = new Size(184, 144);
+            peK3.Size = new Size(298, 274);
             peK3.TabIndex = 5;
             // 
             // peK2
             // 
             peK2.BackgroundImageLayout = ImageLayout.Stretch;
             peK2.Dock = DockStyle.Fill;
-            peK2.Location = new Point(193, 3);
+            peK2.Location = new Point(307, 3);
             peK2.Name = "peK2";
             peK2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             peK2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            peK2.Size = new Size(185, 144);
+            peK2.Size = new Size(299, 273);
             peK2.TabIndex = 4;
             // 
             // peK1
@@ -116,7 +117,7 @@
             peK1.Name = "peK1";
             peK1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             peK1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            peK1.Size = new Size(184, 144);
+            peK1.Size = new Size(298, 273);
             peK1.TabIndex = 0;
             // 
             // gridControl1
@@ -124,7 +125,7 @@
             gridControl1.Location = new Point(0, 0);
             gridControl1.MainView = gridView1;
             gridControl1.Name = "gridControl1";
-            gridControl1.Size = new Size(656, 547);
+            gridControl1.Size = new Size(639, 584);
             gridControl1.TabIndex = 1;
             gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
             // 
@@ -139,7 +140,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1033, 546);
+            BackColor = Color.FromArgb(0, 64, 0);
+            BackgroundImage = Properties.Resources.arkaplanzümrüt;
+            ClientSize = new Size(1246, 584);
             Controls.Add(gridControl1);
             Controls.Add(groupControl1);
             FormBorderStyle = FormBorderStyle.None;

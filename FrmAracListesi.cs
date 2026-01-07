@@ -179,5 +179,10 @@ namespace BisarogluOtoGaleri
                 kutu.Image = null; // Dosya bulunamadı
             }
         }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

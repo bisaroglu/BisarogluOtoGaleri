@@ -26,7 +26,10 @@ namespace BisarogluOtoGaleri
         public FrmAracDetay(int id = 0)
         {
             InitializeComponent();
-
+            TextBoxHelper.SetPlaceholder(txtYil, "Plaka Giriniz...");
+            TextBoxHelper.SetPlaceholder(txtKilometre, "Plaka Giriniz...");
+            TextBoxHelper.SetPlaceholder(txtFiyat, "Plaka Giriniz...");
+            
             // Gelen ID'yi içeri alıyoruz
             _gelenArabaID = id;
 
@@ -203,9 +206,9 @@ namespace BisarogluOtoGaleri
 
                 arabaNesnesi.AgirHasarKayitliMi = chkAgirHasar.Checked;
 
-                
+
                 // 2. RESİM MANTIĞI (Hem Ekleme Hem Güncelleme İçin)
-                
+
                 bool yeniResimSecildiMi = _secilenDosyaYollari.Count > 0;
                 string kapakResimAdi = "";
 
@@ -225,9 +228,9 @@ namespace BisarogluOtoGaleri
                 }
 
 
-                
+
                 // 3. KARAR ANI: EKLEME Mİ, GÜNCELLEME Mİ?
-                
+
                 if (_gelenArabaID == 0)
                 {
                     // === YENİ KAYIT MODU ===
@@ -278,5 +281,9 @@ namespace BisarogluOtoGaleri
             }
         }
 
+        private void cmbYakit_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

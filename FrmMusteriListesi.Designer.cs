@@ -41,7 +41,7 @@ namespace BisarogluOtoGaleri
             gridControl1.Location = new Point(0, 0);
             gridControl1.MainView = gridView1;
             gridControl1.Name = "gridControl1";
-            gridControl1.Size = new Size(800, 450);
+            gridControl1.Size = new Size(1246, 584);
             gridControl1.TabIndex = 0;
             gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
             gridControl1.Click += gridControl1_Click;
@@ -56,8 +56,9 @@ namespace BisarogluOtoGaleri
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1246, 584);
             Controls.Add(gridControl1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmMusteriListesi";
             Text = "FrmMusteriListesi";
             Load += FrmMusteriListesi_Load;

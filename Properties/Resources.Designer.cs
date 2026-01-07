@@ -63,9 +63,49 @@ namespace BisarogluOtoGaleri.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap arkaplanzümrüt {
+            get {
+                object obj = ResourceManager.GetObject("arkaplanzümrüt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_1f5dtm1f5dtm1f5d {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_1f5dtm1f5dtm1f5d", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap Gemini_Generated_Image_dfhauqdfhauqdfha {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_dfhauqdfhauqdfha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_e1l3x8e1l3x8e1l3__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_e1l3x8e1l3x8e1l3 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_tzo7jetzo7jetzo7 {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_tzo7jetzo7jetzo7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +126,16 @@ namespace BisarogluOtoGaleri.Properties {
         internal static System.Drawing.Bitmap Gemini_Generated_Image_u5vnm6u5vnm6u5vn1 {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_u5vnm6u5vnm6u5vn1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_x0wak8x0wak8x0wa {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_x0wak8x0wak8x0wa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

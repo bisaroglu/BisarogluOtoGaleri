@@ -34,18 +34,34 @@ namespace BisarogluOtoGaleri
         }
         private void btnYeniArac_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            FrmAracDetay frm = new FrmAracDetay();
-            frm.ShowDialog(); // Kod burada bekler, kullanıcı formu kapatana kadar aşağı geçmez.
-
-            // 2. Kullanıcı işini bitirip formu kapattığında burası çalışır.
-            // Açık olan Araç Listesi formu varsa bul ve yenile.
-            foreach (Form form in this.MdiChildren)
+            
+            foreach (Form acikForm in Application.OpenForms)
             {
-                if (form is FrmAracListesi)
+                // Eğer açmak istediğimiz form zaten açıksa...
+                if (acikForm is FrmAracDetay)
                 {
-                    ((FrmAracListesi)form).Listele(); // Listeyi güncelle!
+                    acikForm.Activate(); // Onu öne getir.
+                    return; // Ve metottan çık, yenisini oluşturma.
                 }
             }
+
+            // Adım 2: Eğer açık değilse, yeni bir örnek oluştur.
+            FrmAracDetay frm = new FrmAracDetay();
+
+            // Adım 3: KRİTİK NOKTA! Formun babasının bu ana form olduğunu belirt.
+            // Bunu dediğin an DocumentManager formu kapar ve içine sekme olarak koyar.
+            frm.MdiParent = this;
+
+            // Not: DocumentManager kullanıyorsan WindowState.Maximized yapmana gerek yoktur,
+            // o zaten otomatik olarak alanı doldurur.
+
+            // Adım 4: Formu göster (ShowDialog DEĞİL!)
+            frm.Show();
+
+            // -------------------------------------------
+            // Not: Listeyi yenileme işlemi (o yorum satırına aldığın kısım) MDI yapısında
+            // farklı yönetilmelidir (örneğin Event'ler ile). Şimdilik sadece formun
+            // doğru açılmasına odaklanalım.
         }
         // Gelen kullanıcının rolünü hafızada tutmak için değişken
         private string _gelenRol;
@@ -55,6 +71,7 @@ namespace BisarogluOtoGaleri
         public FrmAnaSayfa(string rol)
         {
             InitializeComponent();
+
             _gelenRol = rol;
 
         }
@@ -73,10 +90,9 @@ namespace BisarogluOtoGaleri
                 // DİKKAT: Tasarım ekranında "İstatistik ve Raporlar" sekmesine tıklayıp
                 // Properties panelinden (Name) kısmını 'ribbonPageRaporlar' yapmalısın.
                 // Eğer yapmadıysan aşağıdaki satır hata verebilir.
-                if (ribbonPageRaporlar != null)
-                {
-                    ribbonPageRaporlar.Visible = false;
-                }
+                
+                    btnSatisGecmisi.Enabled = false;
+                
             }
         }
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAracDetay));
             txtYil = new TextBox();
             txtKilometre = new TextBox();
             txtFiyat = new TextBox();
@@ -50,84 +51,113 @@
             // 
             // txtYil
             // 
-            txtYil.Location = new Point(319, 131);
+            txtYil.BackColor = Color.DarkKhaki;
+            txtYil.BorderStyle = BorderStyle.FixedSingle;
+            txtYil.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            txtYil.Location = new Point(213, 182);
             txtYil.Name = "txtYil";
-            txtYil.Size = new Size(100, 23);
+            txtYil.Size = new Size(100, 29);
             txtYil.TabIndex = 2;
             txtYil.Text = "Yıl:";
             // 
             // txtKilometre
             // 
-            txtKilometre.Location = new Point(319, 160);
+            txtKilometre.BackColor = Color.DarkKhaki;
+            txtKilometre.BorderStyle = BorderStyle.FixedSingle;
+            txtKilometre.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            txtKilometre.Location = new Point(213, 309);
             txtKilometre.Name = "txtKilometre";
-            txtKilometre.Size = new Size(100, 23);
+            txtKilometre.Size = new Size(100, 29);
             txtKilometre.TabIndex = 3;
             txtKilometre.Text = "Kilometre:";
             // 
             // txtFiyat
             // 
-            txtFiyat.Location = new Point(319, 189);
+            txtFiyat.BackColor = Color.DarkKhaki;
+            txtFiyat.BorderStyle = BorderStyle.FixedSingle;
+            txtFiyat.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            txtFiyat.Location = new Point(213, 384);
             txtFiyat.Name = "txtFiyat";
-            txtFiyat.Size = new Size(100, 23);
+            txtFiyat.Size = new Size(100, 29);
             txtFiyat.TabIndex = 4;
             txtFiyat.Text = "Fiyat:";
             // 
             // cmbVites
             // 
+            cmbVites.BackColor = Color.DarkKhaki;
+            cmbVites.FlatStyle = FlatStyle.Flat;
+            cmbVites.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             cmbVites.FormattingEnabled = true;
-            cmbVites.Location = new Point(319, 218);
+            cmbVites.Items.AddRange(new object[] { "Otomatik", "Manuel" });
+            cmbVites.Location = new Point(213, 269);
             cmbVites.Name = "cmbVites";
-            cmbVites.Size = new Size(121, 23);
+            cmbVites.Size = new Size(121, 29);
             cmbVites.TabIndex = 5;
             cmbVites.Text = "Vites Tipi:";
             // 
             // cmbYakit
             // 
+            cmbYakit.BackColor = Color.DarkKhaki;
+            cmbYakit.FlatStyle = FlatStyle.Flat;
+            cmbYakit.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             cmbYakit.FormattingEnabled = true;
-            cmbYakit.Location = new Point(319, 247);
+            cmbYakit.Items.AddRange(new object[] { "Dizel", "Benzin", "Elektrik", "LPG" });
+            cmbYakit.Location = new Point(213, 226);
             cmbYakit.Name = "cmbYakit";
-            cmbYakit.Size = new Size(121, 23);
+            cmbYakit.Size = new Size(121, 29);
             cmbYakit.TabIndex = 6;
             cmbYakit.Text = "Yakıt Türü:";
+            cmbYakit.SelectedIndexChanged += cmbYakit_SelectedIndexChanged;
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(395, 304);
+            btnKaydet.BackColor = SystemColors.ControlDarkDark;
+            btnKaydet.BackgroundImage = Properties.Resources.Gemini_Generated_Image_e1l3x8e1l3x8e1l3__1_;
+            btnKaydet.BackgroundImageLayout = ImageLayout.Stretch;
+            btnKaydet.FlatStyle = FlatStyle.Flat;
+            btnKaydet.Location = new Point(213, 435);
             btnKaydet.Name = "btnKaydet";
-            btnKaydet.Size = new Size(75, 23);
+            btnKaydet.Size = new Size(351, 59);
             btnKaydet.TabIndex = 8;
-            btnKaydet.Text = "KAYDET";
-            btnKaydet.UseVisualStyleBackColor = true;
+            btnKaydet.UseVisualStyleBackColor = false;
             btnKaydet.Click += btnKaydet_Click;
             // 
             // chkAgirHasar
             // 
             chkAgirHasar.AutoSize = true;
-            chkAgirHasar.Location = new Point(331, 279);
+            chkAgirHasar.BackColor = Color.DarkKhaki;
+            chkAgirHasar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            chkAgirHasar.Location = new Point(213, 348);
             chkAgirHasar.Name = "chkAgirHasar";
-            chkAgirHasar.Size = new Size(109, 19);
+            chkAgirHasar.Size = new Size(149, 25);
             chkAgirHasar.TabIndex = 9;
             chkAgirHasar.Text = "Ağır Hasarlı mı?";
-            chkAgirHasar.UseVisualStyleBackColor = true;
+            chkAgirHasar.UseVisualStyleBackColor = false;
             // 
             // pbxAracResim
             // 
+            pbxAracResim.BackColor = Color.DarkKhaki;
             pbxAracResim.BorderStyle = BorderStyle.FixedSingle;
-            pbxAracResim.Location = new Point(31, 39);
+            pbxAracResim.Location = new Point(704, 107);
             pbxAracResim.Name = "pbxAracResim";
-            pbxAracResim.Size = new Size(222, 144);
+            pbxAracResim.Size = new Size(457, 232);
             pbxAracResim.SizeMode = PictureBoxSizeMode.StretchImage;
             pbxAracResim.TabIndex = 10;
             pbxAracResim.TabStop = false;
+            pbxAracResim.Tag = "";
             // 
             // btnResimSec
             // 
-            btnResimSec.Location = new Point(138, 275);
+            btnResimSec.BackColor = Color.DarkKhaki;
+            btnResimSec.BackgroundImage = (Image)resources.GetObject("btnResimSec.BackgroundImage");
+            btnResimSec.BackgroundImageLayout = ImageLayout.Stretch;
+            btnResimSec.FlatStyle = FlatStyle.Flat;
+            btnResimSec.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnResimSec.Location = new Point(820, 424);
             btnResimSec.Name = "btnResimSec";
-            btnResimSec.Size = new Size(104, 23);
+            btnResimSec.Size = new Size(236, 38);
             btnResimSec.TabIndex = 11;
-            btnResimSec.Text = "Resim Ekle";
-            btnResimSec.UseVisualStyleBackColor = true;
+            btnResimSec.UseVisualStyleBackColor = false;
             btnResimSec.Click += btnResimSec_Click;
             // 
             // openFileDialog1
@@ -137,26 +167,31 @@
             // 
             // btnGeri
             // 
-            btnGeri.Location = new Point(31, 218);
+            btnGeri.BackColor = Color.Olive;
+            btnGeri.FlatStyle = FlatStyle.Flat;
+            btnGeri.Location = new Point(778, 361);
             btnGeri.Name = "btnGeri";
             btnGeri.Size = new Size(75, 23);
             btnGeri.TabIndex = 12;
             btnGeri.Text = "<";
-            btnGeri.UseVisualStyleBackColor = true;
+            btnGeri.UseVisualStyleBackColor = false;
             // 
             // btnIleri
             // 
-            btnIleri.Location = new Point(167, 218);
+            btnIleri.BackColor = Color.Olive;
+            btnIleri.FlatStyle = FlatStyle.Flat;
+            btnIleri.Location = new Point(1017, 363);
             btnIleri.Name = "btnIleri";
             btnIleri.Size = new Size(75, 23);
             btnIleri.TabIndex = 13;
             btnIleri.Text = ">";
-            btnIleri.UseVisualStyleBackColor = true;
+            btnIleri.UseVisualStyleBackColor = false;
             // 
             // lblResimSayac
             // 
             lblResimSayac.AutoSize = true;
-            lblResimSayac.Location = new Point(121, 222);
+            lblResimSayac.BackColor = Color.DarkKhaki;
+            lblResimSayac.Location = new Point(918, 369);
             lblResimSayac.Name = "lblResimSayac";
             lblResimSayac.Size = new Size(30, 15);
             lblResimSayac.TabIndex = 14;
@@ -164,31 +199,47 @@
             // 
             // lkeMarka
             // 
-            lkeMarka.Location = new Point(319, 65);
+            lkeMarka.Location = new Point(213, 104);
             lkeMarka.Name = "lkeMarka";
+            lkeMarka.Properties.Appearance.BackColor = Color.DarkKhaki;
+            lkeMarka.Properties.Appearance.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lkeMarka.Properties.Appearance.ForeColor = Color.Black;
+            lkeMarka.Properties.Appearance.Options.UseBackColor = true;
+            lkeMarka.Properties.Appearance.Options.UseFont = true;
+            lkeMarka.Properties.Appearance.Options.UseForeColor = true;
             lkeMarka.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             lkeMarka.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            lkeMarka.Properties.NullText = "Marka";
+            lkeMarka.Properties.NullText = "";
+            lkeMarka.Properties.NullValuePrompt = "Marka";
             lkeMarka.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            lkeMarka.Size = new Size(100, 20);
+            lkeMarka.Size = new Size(100, 26);
             lkeMarka.TabIndex = 15;
             lkeMarka.EditValueChanged += lkeMarka_EditValueChanged;
             // 
             // lkeModel
             // 
-            lkeModel.Location = new Point(319, 91);
+            lkeModel.Location = new Point(213, 142);
             lkeModel.Name = "lkeModel";
+            lkeModel.Properties.Appearance.BackColor = Color.DarkKhaki;
+            lkeModel.Properties.Appearance.Font = new Font("Tahoma", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            lkeModel.Properties.Appearance.ForeColor = Color.Black;
+            lkeModel.Properties.Appearance.Options.UseBackColor = true;
+            lkeModel.Properties.Appearance.Options.UseFont = true;
+            lkeModel.Properties.Appearance.Options.UseForeColor = true;
             lkeModel.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] { new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo) });
-            lkeModel.Properties.NullText = "Model";
+            lkeModel.Properties.NullText = "";
+            lkeModel.Properties.NullValuePrompt = "Model";
             lkeModel.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            lkeModel.Size = new Size(100, 20);
+            lkeModel.Size = new Size(100, 26);
             lkeModel.TabIndex = 16;
             // 
             // FrmAracDetay
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackgroundImage = Properties.Resources.Gemini_Generated_Image_1f5dtm1f5dtm1f5d;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1230, 545);
             Controls.Add(lkeModel);
             Controls.Add(lkeMarka);
             Controls.Add(lblResimSayac);
@@ -203,7 +254,7 @@
             Controls.Add(txtFiyat);
             Controls.Add(txtKilometre);
             Controls.Add(txtYil);
-            FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FrmAracDetay";
             StartPosition = FormStartPosition.CenterParent;
             Text = "FrmAracDetay";

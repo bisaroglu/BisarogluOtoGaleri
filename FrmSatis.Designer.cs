@@ -152,6 +152,7 @@
             Controls.Add(label1);
             Controls.Add(lueMusteri);
             Controls.Add(lueArac);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "FrmSatis";
             Text = "FrmSatis";
             Load += FrmSatis_Load;
